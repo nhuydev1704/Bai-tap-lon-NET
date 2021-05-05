@@ -1,0 +1,20 @@
+=======================================================================================
+				College Management System
+=======================================================================================
+System Development and Testing
+---------------------------------------------------------------------------------------
+Software resources used
+	Front End design 		:	Microsoft Visual Studio 2010, 2012.
+	Back End 			:	Microsoft SQL Server 2008, 2012.
+	Code-Behind Language		:   	C#
+	Other Requirement		:	.Net Framework 4.0,4.5
+Hardware resources used
+	Windows XP, 7, 8, 8.1, or Above OS
+	Client side - Pentium IV Computer
+=========================================================================================
+Login
+================================
+UserName: admin
+Password: admin
+--------------------------------------------------------------------------------------
+thank you!

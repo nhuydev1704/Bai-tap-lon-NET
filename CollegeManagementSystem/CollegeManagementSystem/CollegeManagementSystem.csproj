@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1C0439A-D115-4642-A963-EAAFC5C04F2F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CollegeManagementSystem</RootNamespace>
+    <AssemblyName>CollegeManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Software.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollegeDataSet.cs">
+      <DependentUpon>CollegeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CollegeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CollegeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDetails\frmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseDetails\frmSubject.Designer.cs">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseBackup\frmDatabaseBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseBackup\frmDatabaseBackup.Designer.cs">
+      <DependentUpon>frmDatabaseBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeDataSet.cs">
+      <DependentUpon>FeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAboutUs .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutUs .designer.cs">
+      <DependentUpon>frmAboutUs .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="lib\CustomMenuColor.cs" />
+    <Compile Include="lib\FeeManage.cs" />
+    <Compile Include="Reports\frmFeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmFeeReport.Designer.cs">
+      <DependentUpon>frmFeeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmStudentReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmStudentReports.Designer.cs">
+      <DependentUpon>frmStudentReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\frmAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\frmSAttendanceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\frmSAttendanceHistory.Designer.cs">
+      <DependentUpon>frmSAttendanceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\frmStudentFeeView1.cs" />
+    <Compile Include="Teacher\frmTAttendanceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\frmTAttendanceHistory.Designer.cs">
+      <DependentUpon>frmTAttendanceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\frmTeacherAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\frmTeacherAttendance.Designer.cs">
+      <DependentUpon>frmTeacherAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\frmTimeSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\frmTimeSchedule.Designer.cs">
+      <DependentUpon>frmTimeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\frmTimeScheduleHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\frmTimeScheduleHistory.Designer.cs">
+      <DependentUpon>frmTimeScheduleHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmCreateUser.designer.cs">
+      <DependentUpon>frmCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDIMasterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIMasterPage.designer.cs">
+      <DependentUpon>frmMDIMasterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\frmTeacherRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\frmTeacherRegister.designer.cs">
+      <DependentUpon>frmTeacherRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\frmStudentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\frmStudentAccount.designer.cs">
+      <DependentUpon>frmStudentAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\frmStudentFeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\frmStudentFeeView.Designer.cs">
+      <DependentUpon>frmStudentFeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\frmStudentRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\frmStudentRegister.designer.cs">
+      <DependentUpon>frmStudentRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDetails\frmSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseDetails\frmSemester.designer.cs">
+      <DependentUpon>frmSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDetails\frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseDetails\frmCourse.designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\DatabaseConnection.cs" />
+    <Compile Include="lib\CourseDetails.cs" />
+    <Compile Include="lib\TeacherDetails.cs" />
+    <Compile Include="lib\StudentDetails.cs" />
+    <Compile Include="lib\UserInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\frmConnectServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\frmConnectServer.Designer.cs">
+      <DependentUpon>frmConnectServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\frmFeeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\frmFeeManage.Designer.cs">
+      <DependentUpon>frmFeeManage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CourseDetails\frmSubject.resx">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseBackup\frmDatabaseBackup.resx">
+      <DependentUpon>frmDatabaseBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAboutUs .resx">
+      <DependentUpon>frmAboutUs .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FeeDetailsReport.rdlc" />
+    <EmbeddedResource Include="Reports\FeeMasterReport.rdlc" />
+    <EmbeddedResource Include="Reports\frmFeeReport.resx">
+      <DependentUpon>frmFeeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmStudentReports.resx">
+      <DependentUpon>frmStudentReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Student\frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\frmSAttendanceHistory.resx">
+      <DependentUpon>frmSAttendanceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\frmTAttendanceHistory.resx">
+      <DependentUpon>frmTAttendanceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\frmTeacherAttendance.resx">
+      <DependentUpon>frmTeacherAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\frmTimeSchedule.resx">
+      <DependentUpon>frmTimeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\frmTimeScheduleHistory.resx">
+      <DependentUpon>frmTimeScheduleHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmCreateUser.resx">
+      <DependentUpon>frmCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDIMasterPage.resx">
+      <DependentUpon>frmMDIMasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\frmTeacherRegister.resx">
+      <DependentUpon>frmTeacherRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\frmStudentAccount.resx">
+      <DependentUpon>frmStudentAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\frmStudentFeeView.resx">
+      <DependentUpon>frmStudentFeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\frmStudentRegister.resx">
+      <DependentUpon>frmStudentRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseDetails\frmSemester.resx">
+      <DependentUpon>frmSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseDetails\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Utility\frmConnectServer.resx">
+      <DependentUpon>frmConnectServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utility\frmFeeManage.resx">
+      <DependentUpon>frmFeeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="CollegeDataSet.xsc">
+      <DependentUpon>CollegeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CollegeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CollegeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CollegeDataSet.xss">
+      <DependentUpon>CollegeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FeeDataSet.xsc">
+      <DependentUpon>FeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FeeDataSet.xss">
+      <DependentUpon>FeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Software.ico" />
+    <None Include="Resources\Tools.png" />
+    <None Include="Resources\Student.png" />
+    <None Include="Resources\Teachers.png" />
+    <None Include="Resources\Folder.png" />
+    <None Include="Resources\Menu_bg.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\File.png" />
+    <None Include="Resources\empty_profile.jpg" />
+    <None Include="Resources\Report.png" />
+    <None Include="Resources\Help.png" />
+    <Content Include="Resources\Server.ico" />
+    <None Include="Resources\system_users.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
