@@ -63,7 +63,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(72, 29);
             this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "&Add";
+            this.btnAdd.Text = "&Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -75,7 +75,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 29);
             this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "&Delete";
+            this.btnDelete.Text = "&Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -86,7 +86,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(72, 29);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Text = "&Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

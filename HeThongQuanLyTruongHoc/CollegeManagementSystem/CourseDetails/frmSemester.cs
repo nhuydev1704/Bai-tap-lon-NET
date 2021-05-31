@@ -18,7 +18,7 @@ namespace CollegeManagementSystem.CourseDetails
             InitializeComponent();
         }
 
-        #region "Form events"
+        #region "Form sự kiện"
         private void frmSemester_Load(object sender, EventArgs e)
         {
             _AutoNumber();
@@ -26,7 +26,7 @@ namespace CollegeManagementSystem.CourseDetails
         }
         #endregion
 
-        #region "Methods"
+        #region "Phương thức"
         protected void _AutoNumber()
         {
             txtSemester.Text = Global.AutoNumber("Select max(SemesterId) as SemesterId FROM Semester", 1).ToString();
@@ -53,7 +53,7 @@ namespace CollegeManagementSystem.CourseDetails
         }
         #endregion
 
-        #region "ListBox events"
+        #region "ListBox sự kiện"
         private void lstSemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             var SelectQuery = "Select * from Semester Where SemesterId='" + lstSemester.Text + "'";
@@ -70,12 +70,12 @@ namespace CollegeManagementSystem.CourseDetails
         }
         #endregion
 
-        #region "Button events"
+        #region "Button sự kiện"
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (lstSemester.Items.Count >= 8)
             {
-                MessageBox.Show("Semester must be between 1 to 8 accept.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Học kỳ từ 1 đến 8.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtSemester.Focus();
                 txtSemester.SelectAll();
                 return;
@@ -85,7 +85,7 @@ namespace CollegeManagementSystem.CourseDetails
             {
                 ObjCourseDetails.Semester = txtSemester.Text;
                 ObjCourseDetails.AddSemester();
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Process();
             }
             catch (SqlException ex)
@@ -99,7 +99,7 @@ namespace CollegeManagementSystem.CourseDetails
             try
             {
                 DialogResult Result;
-                Result = MessageBox.Show("Are you sure you want delete record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Bạn chắc chắn muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     ObjCourseDetails.Semester = txtSemester.Text;

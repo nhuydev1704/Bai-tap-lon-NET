@@ -24,7 +24,7 @@ namespace CollegeManagementSystem.Reports
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'collegeDataSet.RegStudent' table. You can move, or remove it, as needed.
-            this.regStudentTableAdapter.Fill(this.collegeDataSet.RegStudent);
+            regStudentTableAdapter.Fill(this.collegeDataSet.RegStudent);
             this.reportStudentViewer.RefreshReport();
         }
     }

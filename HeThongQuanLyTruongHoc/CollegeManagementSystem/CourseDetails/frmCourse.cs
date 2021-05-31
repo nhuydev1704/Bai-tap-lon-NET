@@ -19,12 +19,12 @@ namespace CollegeManagementSystem.CourseDetails
             InitializeComponent();
         }
 
-        #region "Objects and Variables"
+        #region "Tạo đổi tượng và biến"
         private string CourseId = "";
         lib.CourseDetails CourseDetails = new lib.CourseDetails();
         #endregion
 
-        #region "Form events"
+        #region "Sự kiện form load"
         private void frmCourse_Load(object sender, EventArgs e)
         {
             SemesterList();
@@ -49,7 +49,7 @@ namespace CollegeManagementSystem.CourseDetails
         }
         #endregion
 
-        #region "Methods"
+        #region "Phương thức"
         private void BindData()
         {
             string Data = "SELECT * From Course";
@@ -97,21 +97,21 @@ namespace CollegeManagementSystem.CourseDetails
             bool isValid = true;
             if (txtCourseName.Text == string.Empty)
             {
-                MessageBox.Show("Course name is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tên khóa học bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtCourseName.Focus();
                 isValid = false;
             }
             else
                 if (cmbSemester.Text == string.Empty)
                 {
-                    MessageBox.Show("Semester is not selected.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Học kỳ không được chọn.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     cmbSemester.Focus();
                     isValid = false;
                 }
                 else
                     if (!string.IsNullOrEmpty(objCon.GetSqlData("Select Semester from Course Where CourseName='" + txtCourseName.Text.Trim() + "' AND Semester='" + cmbSemester.Text.Trim() + "'")))
                     {
-                        MessageBox.Show("A duplicate semester in course.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Đã có học kỳ trong khóa học.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txtCourseName.Focus();
                         txtCourseName.SelectAll();
                         isValid = false;
@@ -120,7 +120,7 @@ namespace CollegeManagementSystem.CourseDetails
         }
         #endregion
 
-        #region "Gridviewdetails events"
+        #region "Datagid view sự kiện"
         private void dataSubjectSetupView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1 || e.ColumnIndex > 2)  // ignore header row and any column
@@ -133,7 +133,7 @@ namespace CollegeManagementSystem.CourseDetails
         }
         #endregion
 
-        #region "Button events"
+        #region "Sự kiện button"
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -145,7 +145,7 @@ namespace CollegeManagementSystem.CourseDetails
                 CourseDetails.CourseName = txtCourseName.Text;
                 CourseDetails.Semester = cmbSemester.Text;
                 CourseDetails.AddCourse();
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearAll();
                 dataGridCourseDetails.Rows.Clear();
                 BindData();
@@ -161,12 +161,12 @@ namespace CollegeManagementSystem.CourseDetails
             try
             {
                 DialogResult DResult;
-                DResult = MessageBox.Show("Are you sure want to delete record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DResult = MessageBox.Show("Bạn có muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (DResult == DialogResult.Yes)
                 {
                     CourseDetails.CourseId = CourseId;
                     CourseDetails.DeleteCourse();
-                    MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearAll();
                     dataGridCourseDetails.Rows.Clear();
                     BindData();

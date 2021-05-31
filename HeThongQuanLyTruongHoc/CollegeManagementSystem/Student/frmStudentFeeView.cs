@@ -26,28 +26,28 @@ namespace CollegeManagementSystem
 
         private void ViewStudentFeeRecord()
         {
-            //string QueryData = "SELECT StuAdmission.StudentId,StuAdmission.StudentName, StudentFee.TotalSubject,StudentFee.PaidDate,StudentFee.PaidAmount,StudentFee.DueAmount,StudentFee.TotalSubjectFee FROM StuAdmission JOIN StudentFee ON StuAdmission.StudentId = StudentFee.StudentId";
-            //SqlDataAdapter Adpt = new SqlDataAdapter(QueryData, DatabaseConnection.Con);
-            //DataSet Dset = new DataSet();
-            //Adpt.Fill(Dset, "StudentFeeView");
-            //dataStudentFeeView.DataSource = Dset.Tables[0];
+            string QueryData = "SELECT * FROM FeeMaster JOIN FeeDetails ON FeeMaster.FeeID = FeeDetails.FeeID";
+            SqlDataAdapter Adpt = new SqlDataAdapter(QueryData, DatabaseConnection.Con);
+            DataSet Dset = new DataSet();
+            Adpt.Fill(Dset, "StudentFeeView");
+            dataStudentFeeView.DataSource = Dset.Tables[0];
         }
 
         private void txtSearchbyStuName_TextChanged(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    string QueryData = "SELECT StuAdmission.StudentId,StuAdmission.StudentName, StudentFee.TotalSubject,StudentFee.PaidDate,StudentFee.PaidAmount,StudentFee.DueAmount,StudentFee.TotalSubjectFee FROM StuAdmission JOIN StudentFee ON StuAdmission.StudentId = StudentFee.StudentId Where";
-            //    QueryData = QueryData + " StuAdmission.StudentName like '" + txtSearchbyStuName.Text.Trim() + "%'";
-            //    SqlDataAdapter Adpt = new SqlDataAdapter(QueryData, DatabaseConnection.Con);
-            //    DataSet Dset = new DataSet();
-            //    Adpt.Fill(Dset, "StudentFeeView");
-            //    dataStudentFeeView.DataSource = Dset.Tables[0];
-            //}
-            //catch (Exception Ex)
-            //{
-            //    MessageBox.Show(Ex.Message, "Institute Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                string QueryData = "SELECT * FROM FeeMaster JOIN FeeDetails ON FeeMaster.FeeID = FeeDetails.FeeID Where";
+                QueryData = QueryData + " FeeMaster.StudentName like '" + txtSearchbyStuName.Text.Trim() + "%'";
+                SqlDataAdapter Adpt = new SqlDataAdapter(QueryData, DatabaseConnection.Con);
+                DataSet Dset = new DataSet();
+                Adpt.Fill(Dset, "StudentFeeView");
+                dataStudentFeeView.DataSource = Dset.Tables[0];
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "Institute Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -46,7 +46,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fee Id</Value>
+                              <Value>Mã học phí</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -76,7 +76,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Student Name</Value>
+                              <Value>Tên sinh viên</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -106,7 +106,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Roll No</Value>
+                              <Value>Mã sinh viên</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -136,7 +136,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Course</Value>
+                              <Value>Khóa học</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -166,7 +166,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Semester</Value>
+                              <Value>Học kỳ</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

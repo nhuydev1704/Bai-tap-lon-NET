@@ -248,26 +248,26 @@
             // toolMenuSemester
             // 
             this.toolMenuSemester.Name = "toolMenuSemester";
-            this.toolMenuSemester.Size = new System.Drawing.Size(180, 26);
+            this.toolMenuSemester.Size = new System.Drawing.Size(148, 26);
             this.toolMenuSemester.Text = "Học kỳ";
             this.toolMenuSemester.Click += new System.EventHandler(this.toolMenuSemester_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(145, 6);
             // 
             // toolMenuCourse
             // 
             this.toolMenuCourse.Name = "toolMenuCourse";
-            this.toolMenuCourse.Size = new System.Drawing.Size(180, 26);
+            this.toolMenuCourse.Size = new System.Drawing.Size(148, 26);
             this.toolMenuCourse.Text = "Khóa học";
             this.toolMenuCourse.Click += new System.EventHandler(this.toolMenuCourse_Click);
             // 
             // toolMenuSubject
             // 
             this.toolMenuSubject.Name = "toolMenuSubject";
-            this.toolMenuSubject.Size = new System.Drawing.Size(180, 26);
+            this.toolMenuSubject.Size = new System.Drawing.Size(148, 26);
             this.toolMenuSubject.Text = "Môn học";
             this.toolMenuSubject.Click += new System.EventHandler(this.toolMenuSubject_Click);
             // 
@@ -507,7 +507,7 @@
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.aboutUsToolStripMenuItem.Text = "About us";
             this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
@@ -516,6 +516,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(934, 466);
             this.Controls.Add(this.statusMenu);
             this.Controls.Add(this.mnuStripCMS);

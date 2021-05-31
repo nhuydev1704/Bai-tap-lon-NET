@@ -197,17 +197,17 @@ namespace CollegeManagementSystem.CourseDetails
                 objCourseDetails.Semester = cmbSemester.Text;
                 objCourseDetails.SubjectName = txtSubjectName.Text;
                 objCourseDetails.Credits = txtCredits.Text;
-                if (this.btnSave.Text == "&Save")
+                if (this.btnSave.Text == "&Lưu")
                 {
                     objCourseDetails.AddSubject();
-                    MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
-                    if (this.btnSave.Text == "&Update")
+                    if (this.btnSave.Text == "&Cập nhật")
                     {
                         objCourseDetails.UpdateSubject();
-                        MessageBox.Show("Update Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.btnSave.Text = "&Save";
+                        MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.btnSave.Text = "&Lưu";
                         this.btnDelete.Enabled = false;
                     }
                 ClearAll();
@@ -225,16 +225,16 @@ namespace CollegeManagementSystem.CourseDetails
             try
             {
                 DialogResult Result;
-                Result = MessageBox.Show("Are you sure you want delete record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Bạn chắc chắn muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     objCourseDetails.SubjectCode = SubjectId;
                     objCourseDetails.DeleteSubject();
-                    MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearAll();
                     dataSubjectDetails.Rows.Clear();
                     BindData();
-                    this.btnSave.Text = "&Save";
+                    this.btnSave.Text = "&Lưu";
                     this.btnDelete.Enabled = false;
                 }
             }

@@ -124,7 +124,7 @@ SELECT FeeId, StudentName, RollNo, Course, Semester FROM FeeMaster WHERE (FeeId 
   <xs:element name="FeeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FeeDataSet" msprop:Generator_UserDSName="FeeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FeeDetails" msprop:Generator_TableClassName="FeeDetailsDataTable" msprop:Generator_TableVarName="tableFeeDetails" msprop:Generator_RowChangedName="FeeDetailsRowChanged" msprop:Generator_TablePropName="FeeDetails" msprop:Generator_RowDeletingName="FeeDetailsRowDeleting" msprop:Generator_RowChangingName="FeeDetailsRowChanging" msprop:Generator_RowEvHandlerName="FeeDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="FeeDetailsRowDeleted" msprop:Generator_RowClassName="FeeDetailsRow" msprop:Generator_UserTableName="FeeDetails" msprop:Generator_RowEvArgName="FeeDetailsRowChangeEvent">
+        <xs:element name="FeeDetails" msdata:Locale="en-US" msprop:Generator_TableClassName="FeeDetailsDataTable" msprop:Generator_TableVarName="tableFeeDetails" msprop:Generator_TablePropName="FeeDetails" msprop:Generator_RowDeletingName="FeeDetailsRowDeleting" msprop:Generator_RowChangingName="FeeDetailsRowChanging" msprop:Generator_RowEvHandlerName="FeeDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="FeeDetailsRowDeleted" msprop:Generator_UserTableName="FeeDetails" msprop:Generator_RowChangedName="FeeDetailsRowChanged" msprop:Generator_RowEvArgName="FeeDetailsRowChangeEvent" msprop:Generator_RowClassName="FeeDetailsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FeeId" msprop:Generator_ColumnVarNameInTable="columnFeeId" msprop:Generator_ColumnPropNameInRow="FeeId" msprop:Generator_ColumnPropNameInTable="FeeIdColumn" msprop:Generator_UserColumnName="FeeId" type="xs:int" />
@@ -166,7 +166,7 @@ SELECT FeeId, StudentName, RollNo, Course, Semester FROM FeeMaster WHERE (FeeId 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FeeMaster" msprop:Generator_TableClassName="FeeMasterDataTable" msprop:Generator_TableVarName="tableFeeMaster" msprop:Generator_RowChangedName="FeeMasterRowChanged" msprop:Generator_TablePropName="FeeMaster" msprop:Generator_RowDeletingName="FeeMasterRowDeleting" msprop:Generator_RowChangingName="FeeMasterRowChanging" msprop:Generator_RowEvHandlerName="FeeMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="FeeMasterRowDeleted" msprop:Generator_RowClassName="FeeMasterRow" msprop:Generator_UserTableName="FeeMaster" msprop:Generator_RowEvArgName="FeeMasterRowChangeEvent">
+        <xs:element name="FeeMaster" msprop:Generator_TableClassName="FeeMasterDataTable" msprop:Generator_TableVarName="tableFeeMaster" msprop:Generator_TablePropName="FeeMaster" msprop:Generator_RowDeletingName="FeeMasterRowDeleting" msprop:Generator_RowChangingName="FeeMasterRowChanging" msprop:Generator_RowEvHandlerName="FeeMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="FeeMasterRowDeleted" msprop:Generator_UserTableName="FeeMaster" msprop:Generator_RowChangedName="FeeMasterRowChanged" msprop:Generator_RowEvArgName="FeeMasterRowChangeEvent" msprop:Generator_RowClassName="FeeMasterRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FeeId" msprop:Generator_ColumnVarNameInTable="columnFeeId" msprop:Generator_ColumnPropNameInRow="FeeId" msprop:Generator_ColumnPropNameInTable="FeeIdColumn" msprop:Generator_UserColumnName="FeeId" type="xs:int" />
@@ -210,7 +210,7 @@ SELECT FeeId, StudentName, RollNo, Course, Semester FROM FeeMaster WHERE (FeeId 
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__FeeDetail__FeeId__7B5B524B" msdata:parent="FeeMaster" msdata:child="FeeDetails" msdata:parentkey="FeeId" msdata:childkey="FeeId" msprop:Generator_UserChildTable="FeeDetails" msprop:Generator_ChildPropName="GetFeeDetailsRows" msprop:Generator_UserRelationName="FK__FeeDetail__FeeId__7B5B524B" msprop:Generator_ParentPropName="FeeMasterRow" msprop:Generator_RelationVarName="relationFK__FeeDetail__FeeId__7B5B524B" msprop:Generator_UserParentTable="FeeMaster" />
+      <msdata:Relationship name="FK__FeeDetail__FeeId__7B5B524B" msdata:parent="FeeMaster" msdata:child="FeeDetails" msdata:parentkey="FeeId" msdata:childkey="FeeId" msprop:Generator_UserChildTable="FeeDetails" msprop:Generator_ChildPropName="GetFeeDetailsRows" msprop:Generator_UserRelationName="FK__FeeDetail__FeeId__7B5B524B" msprop:Generator_RelationVarName="relationFK__FeeDetail__FeeId__7B5B524B" msprop:Generator_UserParentTable="FeeMaster" msprop:Generator_ParentPropName="FeeMasterRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

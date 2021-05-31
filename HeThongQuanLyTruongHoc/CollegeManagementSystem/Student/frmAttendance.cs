@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.Data.OleDb;
+
 namespace CollegeManagementSystem.Student
 {
     public partial class frmAttendance : Form
@@ -341,5 +343,32 @@ namespace CollegeManagementSystem.Student
             this.Close();
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.textBox1.Text = openFileDialog1.FileName;
+            }
+
+
+            string PathCpnn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
+
+            OleDbConnection conn = new OleDbConnection(PathCpnn);
+
+            OleDbDataAdapter myDataAdapter = new OleDbDataAdapter("Select * from[sheet1$]", conn);
+            DataTable dt = new DataTable();
+
+            myDataAdapter.Fill(dt);
+
+            gridStudentAttendanceData.DataSource = dt;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

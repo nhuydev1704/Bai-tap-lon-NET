@@ -4,5 +4,8 @@
 
     partial class FeeDataSet
     {
+        partial class FeeDetailsDataTable
+        {
+        }
     }
 }
