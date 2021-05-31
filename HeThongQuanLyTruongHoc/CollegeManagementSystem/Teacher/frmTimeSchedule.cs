@@ -221,7 +221,7 @@ namespace CollegeManagementSystem.Teacher
             {
                 try
                 {
-                    if (this.btnAdd.Text == "Add")
+                    if (this.btnAdd.Text == "Thêm")
                     {
                         gridTimeScheduleData.Rows.Add();
                         gridTimeScheduleData.Rows[gridTimeScheduleData.Rows.Count - 1].Cells["SId"].Value = ScheduleId;
@@ -236,11 +236,11 @@ namespace CollegeManagementSystem.Teacher
                         gridTimeScheduleData.Rows[gridTimeScheduleData.Rows.Count - 1].Cells["TeacherCode"].Value = TeacherId;
                         gridTimeScheduleData.Rows[gridTimeScheduleData.Rows.Count - 1].Cells["CourseCode"].Value = CourseId;
                         gridTimeScheduleData.Rows[gridTimeScheduleData.Rows.Count - 1].Cells["SubjectCode"].Value = SubjCode;
-                        MessageBox.Show("Add Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ResetAll();
                     }
                     else
-                        if (this.btnAdd.Text == "Modify")
+                        if (this.btnAdd.Text == "Cập nhật")
                         {
                             DataGridViewRow newDataRow = gridTimeScheduleData.Rows[rowIndex];
                             newDataRow.Cells[0].Value = ScheduleId;
@@ -255,9 +255,9 @@ namespace CollegeManagementSystem.Teacher
                             newDataRow.Cells[9].Value = TeacherId;
                             newDataRow.Cells[10].Value = CourseId;
                             newDataRow.Cells[11].Value = SubjCode;
-                            MessageBox.Show("Modify Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ResetAll();
-                            this.btnAdd.Text = "Add";
+                            this.btnAdd.Text = "Thêm";
                             this.btnDelete.Enabled = false;
                         }
                     GenerateGridViewAutoNo();
@@ -276,13 +276,13 @@ namespace CollegeManagementSystem.Teacher
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to Delete?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
+            if (MessageBox.Show("Bạn có muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
             {
                 this.gridTimeScheduleData.Rows.Remove(this.gridTimeScheduleData.Rows[rowIndex]);
-                MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             ResetAll();
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnDelete.Enabled = false;
             GenerateGridViewAutoNo();
             CheckDataGridTable();
@@ -308,7 +308,7 @@ namespace CollegeManagementSystem.Teacher
                     objTimeSchedule.SubjectCode = Convert.ToInt32(gridTimeScheduleData.Rows[i].Cells["SubjectCode"].Value);
                     objTimeSchedule.AddTimeSchedule();
                 }
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridTimeScheduleData.Rows.Clear();
                 CheckDataGridTable();
                 GenerateGridViewAutoNo();

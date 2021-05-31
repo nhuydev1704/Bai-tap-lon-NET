@@ -77,7 +77,7 @@ namespace CollegeManagementSystem.Teacher
         {
             switch (cmbFilter.Text)
             {
-                case "Teacher Name":
+                case "Tên Giảng Viên":
                     BindData("Select * From TeacherAttendance Where TeacherName like '" + txtSearch.Text.Trim() + "%'");
                     break;
             }

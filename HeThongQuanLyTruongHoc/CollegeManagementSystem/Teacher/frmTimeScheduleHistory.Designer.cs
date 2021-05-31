@@ -67,7 +67,7 @@
             this.cmbFilter.FormattingEnabled = true;
             this.cmbFilter.Items.AddRange(new object[] {
             "(None)",
-            "Teacher Name"});
+            "Tên Giảng Viên"});
             this.cmbFilter.Location = new System.Drawing.Point(57, 26);
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(121, 23);
@@ -167,7 +167,7 @@
             // 
             // Shift
             // 
-            this.Shift.HeaderText = "Thay Đổi";
+            this.Shift.HeaderText = "Khoảng Thời Gian";
             this.Shift.Name = "Shift";
             this.Shift.ReadOnly = true;
             // 

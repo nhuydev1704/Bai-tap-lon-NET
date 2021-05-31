@@ -137,7 +137,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 29);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -147,7 +147,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 29);
             this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -157,7 +157,7 @@
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 29);
             this.btnConfirm.TabIndex = 9;
-            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.Text = "Xác Nhận";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -167,7 +167,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(72, 29);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -217,7 +217,7 @@
             this.groupBox2.Size = new System.Drawing.Size(506, 72);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tham dự";
+            this.groupBox2.Text = "Điểm Danh";
             // 
             // Id
             // 
@@ -234,13 +234,13 @@
             // 
             // AttendanceDate
             // 
-            this.AttendanceDate.HeaderText = "Ngày Tham Dự";
+            this.AttendanceDate.HeaderText = "Ngày Điểm Danh";
             this.AttendanceDate.Name = "AttendanceDate";
             this.AttendanceDate.ReadOnly = true;
             // 
             // Attendance
             // 
-            this.Attendance.HeaderText = "Tham Dự";
+            this.Attendance.HeaderText = "Điểm Danh";
             this.Attendance.Name = "Attendance";
             this.Attendance.ReadOnly = true;
             // 
@@ -271,7 +271,7 @@
             this.Name = "frmTeacherAttendance";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Giảng viên đăng kí tham dự cuộc họp";
+            this.Text = "Giảng viên đăng kí điểm danh lớp học";
             this.Load += new System.EventHandler(this.frmTeacherAttendance_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTeacherAttendance_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picTeacher)).EndInit();

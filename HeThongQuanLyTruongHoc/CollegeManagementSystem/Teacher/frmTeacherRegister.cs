@@ -332,7 +332,7 @@ namespace CollegeManagementSystem.Teacher
                 ObjTeacher.Experience = cmbExperience.Text;
                 ObjTeacher.TeacherPhoto = picTeacher;
                 ObjTeacher.InsertTeacher();
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearAll();
                 dataStaffView.Rows.Clear();
                 BindData();
@@ -368,7 +368,7 @@ namespace CollegeManagementSystem.Teacher
                 ObjTeacher.Experience = cmbExperience.Text;
                 ObjTeacher.TeacherPhoto = picTeacher;
                 ObjTeacher.UpdateTeacher();
-                MessageBox.Show("Update Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearAll();
                 dataStaffView.Rows.Clear();
                 BindData();
@@ -387,12 +387,12 @@ namespace CollegeManagementSystem.Teacher
             try
             {
                 DialogResult Result;
-                Result = MessageBox.Show("Are you sure you want to delete record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Bạn chắc chắn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     ObjTeacher.TeacherId = _TeacherId.ToString();
                     ObjTeacher.DeleteTeacher();
-                    MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearAll();
                     dataStaffView.Rows.Clear();
                     BindData();

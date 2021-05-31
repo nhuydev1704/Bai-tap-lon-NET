@@ -49,7 +49,7 @@ namespace CollegeManagementSystem.Teacher
         {
             if (this.cmbTeacherName.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Teacher name is empty. select teacher name.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tên Giảng viên để trống.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 cmbTeacherName.Focus();
                 isValid = false;
             }
@@ -142,7 +142,7 @@ namespace CollegeManagementSystem.Teacher
             }
             this.TeacherId = row.Cells[4].Value.ToString();
 
-            this.btnAdd.Text = "Modify";
+            this.btnAdd.Text = "Cập nhật";
             this.btnDelete.Enabled = true;
         }
         #endregion
@@ -154,7 +154,7 @@ namespace CollegeManagementSystem.Teacher
                 return;
             try
             {
-                if (this.btnAdd.Text == "Add")
+                if (this.btnAdd.Text == "Thêm")
                 {
                     gridTeacherAttendanceData.Rows.Add();
                     gridTeacherAttendanceData.Rows[gridTeacherAttendanceData.Rows.Count - 1].Cells["Id"].Value = AttendanceId;
@@ -170,11 +170,11 @@ namespace CollegeManagementSystem.Teacher
                             gridTeacherAttendanceData.Rows[gridTeacherAttendanceData.Rows.Count - 1].Cells["Attendance"].Value = rdAbsent.Text;
                         }
                     gridTeacherAttendanceData.Rows[gridTeacherAttendanceData.Rows.Count - 1].Cells["TId"].Value = TeacherId;
-                    MessageBox.Show("Add Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetAll();
                 }
                 else
-                    if (this.btnAdd.Text == "Modify")
+                    if (this.btnAdd.Text == "Cập nhật")
                     {
                         DataGridViewRow newDataRow = gridTeacherAttendanceData.Rows[indexRow];
                         newDataRow.Cells[0].Value = AttendanceId;
@@ -190,9 +190,9 @@ namespace CollegeManagementSystem.Teacher
                                 newDataRow.Cells[3].Value = rdAbsent.Text;
                             }
                         newDataRow.Cells[4].Value = TeacherId;
-                        MessageBox.Show("Modify Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ResetAll();
-                        this.btnAdd.Text = "Add";
+                        this.btnAdd.Text = "Thêm";
                         this.btnDelete.Enabled = false;
                     }
                 GenerateGridViewAutoNo();
@@ -206,13 +206,13 @@ namespace CollegeManagementSystem.Teacher
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to Delete?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
+            if (MessageBox.Show("Bạn có muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
             {
                 this.gridTeacherAttendanceData.Rows.Remove(this.gridTeacherAttendanceData.Rows[indexRow]);
-                MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa thành  công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             ResetAll();
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnDelete.Enabled = false;
             GenerateGridViewAutoNo();
             CheckDataGridTable();
@@ -231,7 +231,7 @@ namespace CollegeManagementSystem.Teacher
                     objTAttendance.TeacherId = gridTeacherAttendanceData.Rows[i].Cells["TId"].Value.ToString();
                     objTAttendance.AddTeacherAttendance();
                 }
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridTeacherAttendanceData.Rows.Clear();
                 CheckDataGridTable();
                 GenerateGridViewAutoNo();

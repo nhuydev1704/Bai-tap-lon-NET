@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.regStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -43,6 +43,7 @@
             // regStudentBindingSource
             // 
             this.regStudentBindingSource.DataMember = "RegStudent";
+            this.regStudentBindingSource.CurrentChanged += new System.EventHandler(this.regStudentBindingSource_CurrentChanged);
             // 
             // groupBox1
             // 
@@ -91,9 +92,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportStudentViewer.BackColor = System.Drawing.Color.SlateGray;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.regStudentBindingSource;
-            this.reportStudentViewer.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.regStudentBindingSource;
+            this.reportStudentViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportStudentViewer.LocalReport.ReportEmbeddedResource = "CollegeManagementSystem.Reports.Report1.rdlc";
             this.reportStudentViewer.Location = new System.Drawing.Point(12, 70);
             this.reportStudentViewer.Name = "reportStudentViewer";

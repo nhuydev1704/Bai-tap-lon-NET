@@ -129,13 +129,13 @@
     <value>18, 29</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 15</value>
+    <value>74, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Thể loại</value>
+    <value>Tên Học Phí</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -240,7 +240,7 @@
     <value>True</value>
   </metadata>
   <data name="Category.HeaderText" xml:space="preserve">
-    <value>Thể loại</value>
+    <value>Tên Học Phí</value>
   </data>
   <metadata name="Amount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -309,7 +309,7 @@
     <value>1</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>&amp;Save</value>
+    <value>&amp;Lưu</value>
   </data>
   <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
     <value>btnSave</value>
@@ -339,7 +339,7 @@
     <value>2</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>&amp;Delete</value>
+    <value>&amp;Xóa</value>
   </data>
   <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
     <value>btnDelete</value>
@@ -366,7 +366,7 @@
     <value>3</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
-    <value>&amp;Cancel</value>
+    <value>&amp;Đóng</value>
   </data>
   <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
     <value>btnCancel</value>

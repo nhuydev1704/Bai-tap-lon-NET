@@ -95,14 +95,14 @@ namespace CollegeManagementSystem.Utility
             var objCon = new lib.DatabaseConnection();
             if (this.txtCategory.Text == string.Empty)
             {
-                MessageBox.Show("Category name is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tên danh mục là bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtCategory.Focus();
                 return;
             }
             else
                 if (txtAmount.Text == string.Empty)
                 {
-                    MessageBox.Show("Amount is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Số tiền yêu cầu.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtAmount.Focus();
                     return;
                 }
@@ -113,24 +113,24 @@ namespace CollegeManagementSystem.Utility
                         ObjFeeManage.CategoryId = Convert.ToInt32(FeeCategoryId.ToString());
                         ObjFeeManage.CategoryName = txtCategory.Text;
                         ObjFeeManage.TotalAmount =Convert.ToInt32(txtAmount.Text);
-                        if (this.btnSave.Text == "&Save")
+                        if (this.btnSave.Text == "&Lưu")
                         {
                             if (!string.IsNullOrEmpty(objCon.GetSqlData("Select Category from FeeManage Where Category= '" + txtCategory.Text.Trim() + "'")))
                             {
-                                MessageBox.Show("A duplicate category can not be applied.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Trùng lặp.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 txtCategory.Focus();
                                 txtCategory.SelectAll();
                                 return;
                             }
                             ObjFeeManage.AddFeeManage();
-                            MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
-                            if (this.btnSave.Text == "&Update")
+                            if (this.btnSave.Text == "&Cập nhật")
                             {
                                 ObjFeeManage.UpdateFeeManage();
-                                MessageBox.Show("Update Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.btnSave.Text = "&Save";
+                                MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.btnSave.Text = "&Lưu";
                                 this.btnDelete.Enabled = false;
                             }
                         ClearAll();
@@ -149,16 +149,16 @@ namespace CollegeManagementSystem.Utility
             try
             {
                 DialogResult Result;
-                Result = MessageBox.Show("Are you sure you want delete record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     ObjFeeManage.CategoryId = Convert.ToInt32(FeeCategoryId.ToString());
                     ObjFeeManage.DeleteFeeManage();
-                    MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearAll();
                     dataGridFeeManage.Rows.Clear();
                     BindData();
-                    this.btnSave.Text = "&Save";
+                    this.btnSave.Text = "&Lưu";
                     this.btnDelete.Enabled = false;
                 }
             }

@@ -47,14 +47,14 @@ namespace CollegeManagementSystem
         {
             if (txtUserName.Text == string.Empty)
             {
-                MessageBox.Show("User name is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tên đăng nhập bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUserName.Focus();
                 return;
             }
             else
                 if (objGlobal.IsAllDigits(txtUserName.Text))
                 {
-                    MessageBox.Show("User name can not accepted digits.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Tên người dùng không thể chấp nhận các chữ số.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtUserName.Focus();
                     txtUserName.SelectAll();
                     return;
@@ -62,7 +62,7 @@ namespace CollegeManagementSystem
             else
                 if (txtPassword.Text == string.Empty)
                 {
-                    MessageBox.Show("Password is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Mật khẩu là bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtPassword.Focus();
                     return;
                 }
@@ -77,7 +77,7 @@ namespace CollegeManagementSystem
                             // user login from database
                             if (dtable.Rows.Count < 1)
                             {
-                                MessageBox.Show("Incorrect user name or password, Please! Try again.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Tên người dùng hoặc mật khẩu không chính xác, Xin vui lòng! Thử lại.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 txtUserName.Focus();
                                 txtUserName.SelectAll();
                             }
@@ -92,7 +92,7 @@ namespace CollegeManagementSystem
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Sorry!\nYour account is not active. please, contact your administrator.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Xin lỗi! \nTài khoản của bạn không hoạt động. vui lòng liên hệ với quản trị viên của bạn.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     txtUserName.Focus();
                                     txtUserName.SelectAll();
                                     return;

@@ -27,5 +27,10 @@ namespace CollegeManagementSystem.Reports
             regStudentTableAdapter.Fill(this.collegeDataSet.RegStudent);
             this.reportStudentViewer.RefreshReport();
         }
+
+        private void regStudentBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

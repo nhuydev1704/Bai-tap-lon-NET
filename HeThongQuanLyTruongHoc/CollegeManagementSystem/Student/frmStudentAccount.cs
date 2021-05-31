@@ -84,7 +84,7 @@ namespace CollegeManagementSystem.Student
             }
             else
             {
-                MessageBox.Show("Record not found!", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Không tìm thấy!", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtSearch.Focus();
                 txtSearch.SelectAll();
             }
@@ -95,7 +95,7 @@ namespace CollegeManagementSystem.Student
             bool isValid = true;
             if (objGlobal.IsNegative(Convert.ToInt32(txtPaidAmount.Text)))
             {
-                MessageBox.Show("Enter Positive Value!", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Giá trị không âm!", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPaidAmount.Focus();
                 txtPaidAmount.SelectAll();
                 isValid = false;
@@ -138,13 +138,13 @@ namespace CollegeManagementSystem.Student
         {
             switch (cmbFilter.Text)
             {
-                case "Roll no":
+                case "Mã Sinh Viên":
                     Global.AutoComplete(txtSearch, "Select RollNo From Regstudent");
                     break;
-                case "Student name":
+                case "Tên Sinh Viên":
                     Global.AutoComplete(txtSearch, "Select StudentName From Regstudent");
                     break;
-                case "Phone no":
+                case "Số Điện Thoại":
                     Global.AutoComplete(txtSearch, "Select PhoneNo From Regstudent");
                     break;
                 case "Email":
@@ -261,7 +261,7 @@ namespace CollegeManagementSystem.Student
             this.txtAmount.Text = row.Cells[3].Value.ToString();
             this.txtPaidAmount.Text = row.Cells[4].Value.ToString();
             this.txtDueAmount.Text = row.Cells[5].Value.ToString();
-            this.btnAdd.Text = "Modify";
+            this.btnAdd.Text = "Xác nhận";
             this.btnDeleteFee.Enabled = true;
         }
 
@@ -293,13 +293,13 @@ namespace CollegeManagementSystem.Student
                 {
                     switch (cmbFilter.Text)
                     {
-                        case "Roll no":
+                        case "Mã Sinh Viên":
                             GetDataBind("Select * From Regstudent Where RollNo='" + txtSearch.Text + "'");
                             break;
-                        case "Student name":
+                        case "Tên Sinh Viên":
                             GetDataBind("Select * From Regstudent Where StudentName='" + txtSearch.Text + "'");
                             break;
-                        case "Phone no":
+                        case "Số Điện Thoại":
                             GetDataBind("Select * From Regstudent Where PhoneNo='" + txtSearch.Text + "'");
                             break;
                         case "Email":
@@ -310,7 +310,7 @@ namespace CollegeManagementSystem.Student
                 else
                     if (this.SelectMode == "VIEWUPDATE")
                     {
-                        BindGrid("Select FeeMaster.FeeId,FeeMaster.StudentName, FeeMaster.RollNo, FeeMaster.Course, FeeMaster.Semester,RegStudent.StudentPic, FeeDetails.CategoryName, FeeDetails.PaidDate, FeeDetails.TotalAmount, FeeDetails.PaidAmount,FeeDetails.DueAmount From FeeMaster,FeeDetails,RegStudent Where RegStudent.StudentName=FeeMaster.StudentName AND FeeMaster.StudentName='" + txtSearch.Text + "'");
+                        BindGrid("Select FeeMaster.FeeId,FeeMaster.StudentName, FeeMaster.RollNo, FeeMaster.Course, FeeMaster.Semester,RegStudent.StudentPic, FeeDetails.CategoryName, FeeDetails.PaidDate, FeeDetails.TotalAmount, FeeDetails.PaidAmount,FeeDetails.DueAmount From FeeMaster,FeeDetails,RegStudent Where RegStudent.StudentName=FeeMaster.StudentName and FeeMaster.FeeId = FeeDetails.FeeId and RegStudent.StudentName ='" + txtSearch.Text + "'");
                     }
             }
         }
@@ -325,7 +325,7 @@ namespace CollegeManagementSystem.Student
                 }
                 else
                 {
-                    if (this.btnAdd.Text == "Add")
+                    if (this.btnAdd.Text == "Thêm")
                     {
                         dataGridFeeView.Rows.Add();
                         dataGridFeeView.Rows[dataGridFeeView.Rows.Count - 1].Cells["Id"].Value = FeeId;
@@ -334,10 +334,10 @@ namespace CollegeManagementSystem.Student
                         dataGridFeeView.Rows[dataGridFeeView.Rows.Count - 1].Cells["TotalAmount"].Value = txtAmount.Text;
                         dataGridFeeView.Rows[dataGridFeeView.Rows.Count - 1].Cells["PaidAmount"].Value = txtPaidAmount.Text;
                         dataGridFeeView.Rows[dataGridFeeView.Rows.Count - 1].Cells["DueAmount"].Value = txtDueAmount.Text;
-                        MessageBox.Show("Add Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
-                        if (this.btnAdd.Text == "Modify")
+                        if (this.btnAdd.Text == "Xác nhận")
                         {
                             DataGridViewRow row = dataGridFeeView.Rows[indexRow];
                             row.Cells[0].Value = FeeId;
@@ -346,8 +346,8 @@ namespace CollegeManagementSystem.Student
                             row.Cells[3].Value = txtAmount.Text;
                             row.Cells[4].Value = txtPaidAmount.Text;
                             row.Cells[5].Value = txtDueAmount.Text;
-                            MessageBox.Show("Modify Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.btnAdd.Text = "Add";
+                            MessageBox.Show("Xác nhận thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.btnAdd.Text = "Thêm";
                             this.btnDeleteFee.Enabled = false;
                         }
                 }
@@ -360,12 +360,12 @@ namespace CollegeManagementSystem.Student
 
         private void btnDeleteFee_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to Delete?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
+            if (MessageBox.Show("Bạn có chắc muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
             {
                 this.dataGridFeeView.Rows.Remove(this.dataGridFeeView.Rows[indexRow]);
-                MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnDeleteFee.Enabled = false;
         }
 
@@ -373,7 +373,7 @@ namespace CollegeManagementSystem.Student
         {
             if (this.dataGridFeeView.Rows.Count == 0)
             {
-                MessageBox.Show("Please! first insert any data in gridview table.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Có dữ liệu trong bản ghi trước!.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             else
@@ -389,7 +389,7 @@ namespace CollegeManagementSystem.Student
                     {
                         ObjFeeManage.AddFeeMaster();
                         _FeeDetails();
-                        MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearAllA();
                         dataGridFeeView.Rows.Clear();
                     }
@@ -413,7 +413,7 @@ namespace CollegeManagementSystem.Student
                 if (this.SelectMode == "VIEWUPDATE")
                 {
                     _FeeDetails();
-                    MessageBox.Show("Update Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearAllA();
                     dataGridFeeView.Rows.Clear();
                 }
@@ -426,19 +426,19 @@ namespace CollegeManagementSystem.Student
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //        DialogResult Result;
-            //        Result = MessageBox.Show("Do You Want to Delete this Record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //        if (Result == DialogResult.Yes)
-            //        {
-            //            MessageBox.Show("Your Record has been Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //    }
-            //catch (Exception Ex)
-            //{
-            //    MessageBox.Show(Ex.Message, Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                    DialogResult Result;
+                    Result = MessageBox.Show("Làm sạch data?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (Result == DialogResult.Yes)
+                    {
+                        dataGridFeeView.Rows.Clear();
+                    }
+                }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

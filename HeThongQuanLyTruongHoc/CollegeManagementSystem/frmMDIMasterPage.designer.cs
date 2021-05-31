@@ -312,25 +312,25 @@
             this.toolMenuAttendanceHistory});
             this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
             this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
-            this.attendanceToolStripMenuItem.Text = "Tham dự";
+            this.attendanceToolStripMenuItem.Text = "Điểm danh";
             // 
             // toolMenuAttendance
             // 
             this.toolMenuAttendance.Name = "toolMenuAttendance";
-            this.toolMenuAttendance.Size = new System.Drawing.Size(195, 26);
-            this.toolMenuAttendance.Text = "Tham dự";
+            this.toolMenuAttendance.Size = new System.Drawing.Size(211, 26);
+            this.toolMenuAttendance.Text = "Điểm danh";
             this.toolMenuAttendance.Click += new System.EventHandler(this.toolMenuAttendance_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(192, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(208, 6);
             // 
             // toolMenuAttendanceHistory
             // 
             this.toolMenuAttendanceHistory.Name = "toolMenuAttendanceHistory";
-            this.toolMenuAttendanceHistory.Size = new System.Drawing.Size(195, 26);
-            this.toolMenuAttendanceHistory.Text = "Lịch sử tham dự";
+            this.toolMenuAttendanceHistory.Size = new System.Drawing.Size(211, 26);
+            this.toolMenuAttendanceHistory.Text = "Lịch sử điểm danh";
             this.toolMenuAttendanceHistory.Click += new System.EventHandler(this.toolMenuAttendanceHistory_Click);
             // 
             // toolStripMenuItem4
@@ -394,7 +394,7 @@
             // 
             this.toolMenuTeacherAttendance.Name = "toolMenuTeacherAttendance";
             this.toolMenuTeacherAttendance.Size = new System.Drawing.Size(217, 26);
-            this.toolMenuTeacherAttendance.Text = "Tham dự";
+            this.toolMenuTeacherAttendance.Text = "Điểm Danh";
             this.toolMenuTeacherAttendance.Click += new System.EventHandler(this.toolMenuTeacherAttendance_Click);
             // 
             // toolStripMenuItem7
@@ -428,7 +428,7 @@
             // 
             this.toolMenuTeacherAttendanceHistory.Name = "toolMenuTeacherAttendanceHistory";
             this.toolMenuTeacherAttendanceHistory.Size = new System.Drawing.Size(238, 26);
-            this.toolMenuTeacherAttendanceHistory.Text = "Lịch sử  tham dự";
+            this.toolMenuTeacherAttendanceHistory.Text = "Lịch sử  điểm danh";
             this.toolMenuTeacherAttendanceHistory.Click += new System.EventHandler(this.toolMenuTeacherAttendanceHistory_Click);
             // 
             // toolStripMenuItem10
@@ -507,8 +507,8 @@
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
-            this.aboutUsToolStripMenuItem.Text = "About us";
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.aboutUsToolStripMenuItem.Text = "Giới thiệu";
             this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // frmMDIMasterPage
@@ -516,14 +516,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::CollegeManagementSystem.Properties.Resources.bgr;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 466);
             this.Controls.Add(this.statusMenu);
             this.Controls.Add(this.mnuStripCMS);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMDIMasterPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý trường học";
+            this.Text = "Quản lý khóa học của trung tâm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMDIMasterPage_Load);
             this.statusMenu.ResumeLayout(false);

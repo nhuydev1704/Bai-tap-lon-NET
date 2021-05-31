@@ -367,6 +367,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bgr1.jpg" />
     <Content Include="Software.ico" />
     <None Include="Resources\Tools.png" />
     <None Include="Resources\Student.png" />

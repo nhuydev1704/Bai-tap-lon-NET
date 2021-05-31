@@ -80,7 +80,7 @@
             // 
             this.dataGridCourseDetails.AllowUserToAddRows = false;
             this.dataGridCourseDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridCourseDetails.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridCourseDetails.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dataGridCourseDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCourseDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(384, 456);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);

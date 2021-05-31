@@ -238,7 +238,7 @@ namespace CollegeManagementSystem.Student
                 return;
             try
             {
-                if (this.btnAdd.Text == "Add")
+                if (this.btnAdd.Text == "Thêm")
                 {
                     gridStudentAttendanceData.Rows.Add();
                     gridStudentAttendanceData.Rows[gridStudentAttendanceData.Rows.Count - 1].Cells["Id"].Value = AttendanceId;
@@ -258,7 +258,7 @@ namespace CollegeManagementSystem.Student
                         }
                     gridStudentAttendanceData.Rows[gridStudentAttendanceData.Rows.Count - 1].Cells["StuId"].Value = Sid;
                     gridStudentAttendanceData.Rows[gridStudentAttendanceData.Rows.Count - 1].Cells["CId"].Value = CourseId;
-                    MessageBox.Show("Add Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetAll();
                 }
                 else
@@ -282,9 +282,9 @@ namespace CollegeManagementSystem.Student
                             }
                         newDataRow.Cells[7].Value = Sid;
                         newDataRow.Cells[8].Value = CourseId;
-                        MessageBox.Show("Modify Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Xác nhận thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ResetAll();
-                        this.btnAdd.Text = "Add";
+                        this.btnAdd.Text = "Thêm";
                         this.btnDelete.Enabled = false;
                     }
                 GenerateGridViewAutoNo();
@@ -298,13 +298,13 @@ namespace CollegeManagementSystem.Student
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to Delete?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information).ToString().ToLower() == "yes")
             {
                 this.gridStudentAttendanceData.Rows.Remove(this.gridStudentAttendanceData.Rows[indexRow]);
-                MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             ResetAll();
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnDelete.Enabled = false;
             GenerateGridViewAutoNo();
             CheckDataGridTable();
@@ -327,7 +327,7 @@ namespace CollegeManagementSystem.Student
                     ObjAttendance.CourseId = gridStudentAttendanceData.Rows[i].Cells["CId"].Value.ToString();
                     ObjAttendance.AddAttendance();
                 }
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridStudentAttendanceData.Rows.Clear();
                 CheckDataGridTable();
                 GenerateGridViewAutoNo();
@@ -346,7 +346,7 @@ namespace CollegeManagementSystem.Student
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            /*OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -363,7 +363,45 @@ namespace CollegeManagementSystem.Student
 
             myDataAdapter.Fill(dt);
 
-            gridStudentAttendanceData.DataSource = dt;
+            gridStudentAttendanceData.DataSource = dt;*/
+
+            Microsoft.Office.Interop.Excel._Application importExcelToDataGridViewApp;
+            Microsoft.Office.Interop.Excel._Workbook importExcelToDataGridViewWorkbook;
+            Microsoft.Office.Interop.Excel._Worksheet importExcelToDataGridViewWorksheet;
+            Microsoft.Office.Interop.Excel.Range importExcelToDataGridViewRange;
+
+            try
+            {
+                importExcelToDataGridViewApp = new Microsoft.Office.Interop.Excel.Application();
+
+                OpenFileDialog importExcelToDataGridViewOpenFileDialog = new OpenFileDialog();
+                //importExcelToDataGridViewOpenFileDialog.InitialDirectory = @"C:/Users/Authentic/Desktop";
+                //importExcelToDataGridViewOpenFileDialog.RestoreDirectory = true;
+                //Dialog Box Title
+                importExcelToDataGridViewOpenFileDialog.Title = "Import Excel File To DataGridView";
+                //filter Excel Files Only
+                importExcelToDataGridViewOpenFileDialog.Filter = "Choose Excel File | *.xlsx;*.xls;*.xlm";
+                //If Open Button Is Clicked
+                if (importExcelToDataGridViewOpenFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    importExcelToDataGridViewWorkbook = importExcelToDataGridViewApp.Workbooks.Open(importExcelToDataGridViewOpenFileDialog.FileName);
+                    importExcelToDataGridViewWorksheet = importExcelToDataGridViewWorkbook.ActiveSheet;
+                    importExcelToDataGridViewRange = importExcelToDataGridViewWorksheet.UsedRange;
+
+                    //Start Importing from the second row. Since the first row is column header
+                    for (int excelWorkSheetRowIndex = 2; excelWorkSheetRowIndex < importExcelToDataGridViewRange.Rows.Count + 1; excelWorkSheetRowIndex++)
+                    {
+                        //Convert The Path to image and display it in datagridviewimagecolumn
+                        gridStudentAttendanceData.Rows.Add(importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 1].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 2].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 3].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 4].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 5].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 6].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 7].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 8].Value, importExcelToDataGridViewWorksheet.Cells[excelWorkSheetRowIndex, 9].Value);
+                    }
+                }
+                ResetAll();
+
+            }
+            catch (Exception importExcelToDataGridViewException)
+            {
+                MessageBox.Show("Error" + importExcelToDataGridViewException);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

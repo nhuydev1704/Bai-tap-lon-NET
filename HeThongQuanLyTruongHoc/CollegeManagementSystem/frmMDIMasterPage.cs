@@ -30,8 +30,8 @@ namespace CollegeManagementSystem
         {
             if (Mode == true)
             {
-                toolStripUserName.Text = "[User Name:- " + Global.UserName + "]";
-                toolStripRole.Text = "[Role:- " + Global.UserType + "]";
+                toolStripUserName.Text = "[Tên Người Dùng:- " + Global.UserName + "]";
+                toolStripRole.Text = "[Chức Vụ:- " + Global.UserType + "]";
             }
             else
             {

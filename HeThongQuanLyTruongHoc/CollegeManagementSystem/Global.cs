@@ -15,7 +15,7 @@ namespace CollegeManagementSystem
 {
     public class Global
     {
-        public static string Caption = "College Management System";
+        public static string Caption = "Quản lý khóa học";
 
         // Server Login for Database
         public static string ServerName = @"DESKTOP-FDLG94H";

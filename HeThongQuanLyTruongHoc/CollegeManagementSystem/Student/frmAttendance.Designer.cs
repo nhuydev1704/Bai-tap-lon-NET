@@ -44,6 +44,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridStudentAttendanceData = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,14 +58,6 @@
             this.Attendance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StuId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStudentAttendanceData)).BeginInit();
@@ -88,7 +85,7 @@
             this.groupBox1.Size = new System.Drawing.Size(725, 198);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết sinh  viên tham dự";
+            this.groupBox1.Text = "Chi tiết điểm danh sinh viên";
             // 
             // picStudent
             // 
@@ -191,9 +188,9 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(16, 124);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 15);
+            this.label6.Size = new System.Drawing.Size(68, 15);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Tham dự";
+            this.label6.Text = "Điểm danh";
             // 
             // label5
             // 
@@ -235,9 +232,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(360, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 15);
+            this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Kỳ";
+            this.label2.Text = "Học kỳ";
             // 
             // label1
             // 
@@ -275,6 +272,57 @@
             this.gridStudentAttendanceData.TabIndex = 3;
             this.gridStudentAttendanceData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridStudentAttendanceData_CellClick);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(258, 212);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(72, 29);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(584, 519);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 29);
+            this.btnConfirm.TabIndex = 3;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(663, 519);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(74, 29);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(336, 212);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(72, 29);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(31, 217);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "import";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Id
             // 
             this.Id.HeaderText = "Id";
@@ -308,13 +356,13 @@
             // 
             // AttendanceDate
             // 
-            this.AttendanceDate.HeaderText = "Ngày Tham Dự";
+            this.AttendanceDate.HeaderText = "Ngày Điểm Danh";
             this.AttendanceDate.Name = "AttendanceDate";
             this.AttendanceDate.ReadOnly = true;
             // 
             // Attendance
             // 
-            this.Attendance.HeaderText = "Tham Dự";
+            this.Attendance.HeaderText = "Điểm Danh";
             this.Attendance.Name = "Attendance";
             this.Attendance.ReadOnly = true;
             // 
@@ -332,90 +380,12 @@
             this.CId.ReadOnly = true;
             this.CId.Visible = false;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(258, 212);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(72, 29);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Location = new System.Drawing.Point(584, 519);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(75, 29);
-            this.btnConfirm.TabIndex = 3;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(663, 519);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 29);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(336, 212);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(72, 29);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(31, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "import";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(119, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(31, 520);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(119, 522);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
-            // 
             // frmAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(749, 556);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
@@ -431,7 +401,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sinh viên tham dự";
+            this.Text = "Điểm danh sinh viên";
             this.Load += new System.EventHandler(this.frmAttendance_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAttendance_KeyDown);
             this.groupBox1.ResumeLayout(false);
@@ -439,7 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStudentAttendanceData)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -465,6 +434,7 @@
         private System.Windows.Forms.RadioButton rdPresent;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.PictureBox picStudent;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Course;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semester;
@@ -474,9 +444,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Attendance;
         private System.Windows.Forms.DataGridViewTextBoxColumn StuId;
         private System.Windows.Forms.DataGridViewTextBoxColumn CId;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

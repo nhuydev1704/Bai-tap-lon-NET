@@ -90,7 +90,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(769, 220);
+            this.groupBox1.Size = new System.Drawing.Size(843, 220);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thời khóa biểu";
@@ -101,7 +101,7 @@
             this.picTeacher.BackgroundImage = global::CollegeManagementSystem.Properties.Resources.empty_profile;
             this.picTeacher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picTeacher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picTeacher.Location = new System.Drawing.Point(554, 20);
+            this.picTeacher.Location = new System.Drawing.Point(654, 20);
             this.picTeacher.Name = "picTeacher";
             this.picTeacher.Size = new System.Drawing.Size(174, 167);
             this.picTeacher.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,7 +126,7 @@
             "10",
             "11",
             "12"});
-            this.cmbPeriod.Location = new System.Drawing.Point(351, 180);
+            this.cmbPeriod.Location = new System.Drawing.Point(432, 180);
             this.cmbPeriod.Name = "cmbPeriod";
             this.cmbPeriod.Size = new System.Drawing.Size(137, 23);
             this.cmbPeriod.TabIndex = 15;
@@ -135,7 +135,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(285, 183);
+            this.label8.Location = new System.Drawing.Point(315, 183);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 15);
             this.label8.TabIndex = 14;
@@ -182,11 +182,11 @@
             this.cmbShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbShift.FormattingEnabled = true;
             this.cmbShift.Items.AddRange(new object[] {
-            "Morning",
-            "Day",
-            "Evening",
-            "Night"});
-            this.cmbShift.Location = new System.Drawing.Point(351, 151);
+            "Sáng",
+            "Cả Ngày",
+            "Chiều",
+            "Tối"});
+            this.cmbShift.Location = new System.Drawing.Point(432, 151);
             this.cmbShift.Name = "cmbShift";
             this.cmbShift.Size = new System.Drawing.Size(162, 23);
             this.cmbShift.TabIndex = 12;
@@ -197,13 +197,13 @@
             this.cmbDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDay.FormattingEnabled = true;
             this.cmbDay.Items.AddRange(new object[] {
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"});
+            "Chủ Nhật",
+            "Thứ Hai",
+            "Thứ Ba",
+            "Thứ Tư",
+            "Thứ Năm",
+            "Thứ Sáu",
+            "Thứ Bảy"});
             this.cmbDay.Location = new System.Drawing.Point(117, 151);
             this.cmbDay.Name = "cmbDay";
             this.cmbDay.Size = new System.Drawing.Size(162, 23);
@@ -226,7 +226,7 @@
             this.cmbSemester.Enabled = false;
             this.cmbSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemester.FormattingEnabled = true;
-            this.cmbSemester.Location = new System.Drawing.Point(351, 68);
+            this.cmbSemester.Location = new System.Drawing.Point(432, 68);
             this.cmbSemester.Name = "cmbSemester";
             this.cmbSemester.Size = new System.Drawing.Size(162, 23);
             this.cmbSemester.TabIndex = 9;
@@ -269,11 +269,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(285, 154);
+            this.label6.Location = new System.Drawing.Point(315, 154);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 15);
+            this.label6.Size = new System.Drawing.Size(100, 15);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Thay đổi";
+            this.label6.Text = "Khoảng thời gian";
             // 
             // label5
             // 
@@ -299,7 +299,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(285, 71);
+            this.label3.Location = new System.Drawing.Point(315, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 15);
             this.label3.TabIndex = 2;
@@ -359,7 +359,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(72, 29);
             this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -370,7 +370,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 29);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -380,7 +380,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(72, 29);
             this.btnCancel.TabIndex = 17;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -390,7 +390,7 @@
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(72, 29);
             this.btnConfirm.TabIndex = 16;
-            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -433,7 +433,7 @@
             // 
             // Shift
             // 
-            this.Shift.HeaderText = "Thay Đổi";
+            this.Shift.HeaderText = "Khoảng Thời Gian";
             this.Shift.Name = "Shift";
             this.Shift.ReadOnly = true;
             // 

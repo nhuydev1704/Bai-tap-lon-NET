@@ -62,7 +62,7 @@
             this.cmbFilter.FormattingEnabled = true;
             this.cmbFilter.Items.AddRange(new object[] {
             "(None)",
-            "Teacher Name"});
+            "Tên Giảng Viên"});
             this.cmbFilter.Location = new System.Drawing.Point(58, 24);
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(121, 23);
@@ -133,13 +133,13 @@
             // 
             // AttendanceDate
             // 
-            this.AttendanceDate.HeaderText = "Ngày Tham Dự";
+            this.AttendanceDate.HeaderText = "Ngày Điểm Danh";
             this.AttendanceDate.Name = "AttendanceDate";
             this.AttendanceDate.ReadOnly = true;
             // 
             // Attendance
             // 
-            this.Attendance.HeaderText = "Tham Dự";
+            this.Attendance.HeaderText = "Điểm Danh";
             this.Attendance.Name = "Attendance";
             this.Attendance.ReadOnly = true;
             // 

@@ -80,10 +80,10 @@ namespace CollegeManagementSystem.Student
         {
             switch (cmbFilter.Text)
             {
-                case "Roll No":
+                case "Mã Sinh Viên":
                     BindData("Select * From StuAttendance Where RollNo like '" + txtSearch.Text.Trim() + "%'");
                     break;
-                case "Student Name":
+                case "Tên Sinh Viên":
                     BindData("Select * From StuAttendance Where StudentName like '" + txtSearch.Text.Trim() + "%'");
                     break;
             }
@@ -96,5 +96,10 @@ namespace CollegeManagementSystem.Student
             this.Close();
         }
         #endregion
+
+        private void dataAttendanceHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

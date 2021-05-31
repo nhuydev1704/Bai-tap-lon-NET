@@ -33,7 +33,6 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataAttendanceHistory = new System.Windows.Forms.DataGridView();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +40,7 @@
             this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AttendanceDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Attendance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAttendanceHistory)).BeginInit();
             this.SuspendLayout();
@@ -65,8 +65,8 @@
             this.cmbFilter.FormattingEnabled = true;
             this.cmbFilter.Items.AddRange(new object[] {
             "(None)",
-            "Roll No",
-            "Student Name"});
+            "Mã Sinh Viên",
+            "Tên Sinh Viên"});
             this.cmbFilter.Location = new System.Drawing.Point(58, 24);
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(121, 23);
@@ -114,16 +114,7 @@
             this.dataAttendanceHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataAttendanceHistory.Size = new System.Drawing.Size(700, 366);
             this.dataAttendanceHistory.TabIndex = 1;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(637, 443);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 31);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.dataAttendanceHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAttendanceHistory_CellContentClick);
             // 
             // Id
             // 
@@ -158,15 +149,25 @@
             // 
             // AttendanceDate
             // 
-            this.AttendanceDate.HeaderText = "Ngày Tham Dự";
+            this.AttendanceDate.HeaderText = "Ngày Điểm Danh";
             this.AttendanceDate.Name = "AttendanceDate";
             this.AttendanceDate.ReadOnly = true;
             // 
             // Attendance
             // 
-            this.Attendance.HeaderText = "Tham Dự";
+            this.Attendance.HeaderText = "Điểm Danh";
             this.Attendance.Name = "Attendance";
             this.Attendance.ReadOnly = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(637, 443);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 31);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmSAttendanceHistory
             // 
@@ -184,7 +185,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chi tiết lịch sử tham dự sinh viên";
+            this.Text = "Chi tiết lịch sử điểm danh sinh viên";
             this.Load += new System.EventHandler(this.frmSAttendanceHistory_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSAttendanceHistory_KeyDown);
             this.groupBox1.ResumeLayout(false);

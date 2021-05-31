@@ -23,13 +23,13 @@ namespace CollegeManagementSystem.Users
         {
             if (txtNewPassword.Text == "" || txtConfirmPassword.Text == "")
             {
-                MessageBox.Show("Type your new password and confirm password", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nhập mật khẩu mới của bạn và xác nhận mật khẩu", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNewPassword.Focus();
                 return;
             }
             else if (txtNewPassword.Text.Trim() != txtConfirmPassword.Text.Trim())
             {
-                MessageBox.Show("New or confirm password not matched", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Mật khẩu mới hoặc xác nhận không khớp", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtConfirmPassword.SelectAll();
                 txtConfirmPassword.Focus();
                 return;
@@ -39,7 +39,7 @@ namespace CollegeManagementSystem.Users
                 objUser.UserName = txtUserName.Text;
                 objUser.Password = txtNewPassword.Text;
                 objUser.ChangePassword();
-                MessageBox.Show("Password Changed Successfully", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thay đổi thành công", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNewPassword.Clear();
                 txtConfirmPassword.Clear();
             }

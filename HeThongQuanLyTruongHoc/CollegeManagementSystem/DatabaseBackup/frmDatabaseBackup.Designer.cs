@@ -44,14 +44,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.grpBox1 = new System.Windows.Forms.GroupBox();
             this.grpBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdBackup = new System.Windows.Forms.RadioButton();
-            this.rdRestore = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDatabaseName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSelectPath = new System.Windows.Forms.TextBox();
             this.btnPathBrowse = new System.Windows.Forms.Button();
-            this.txtDatabaseName = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdRestore = new System.Windows.Forms.RadioButton();
+            this.rdBackup = new System.Windows.Forms.RadioButton();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
@@ -73,7 +73,7 @@
             this.groupBox1.Size = new System.Drawing.Size(410, 119);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Server Connection Details";
+            this.groupBox1.Text = "Chi tiết kết nối";
             // 
             // txtPassword
             // 
@@ -139,9 +139,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(14, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Select Folder";
+            this.label6.Text = "Chọn thư mục";
             // 
             // button3
             // 
@@ -203,9 +203,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(14, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(75, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Choose Database";
+            this.label5.Text = "Tên Database";
             // 
             // grpBox1
             // 
@@ -237,42 +237,23 @@
             this.grpBox2.TabStop = false;
             this.grpBox2.Text = "Restore";
             // 
-            // groupBox2
+            // label7
             // 
-            this.groupBox2.Controls.Add(this.rdRestore);
-            this.groupBox2.Controls.Add(this.rdBackup);
-            this.groupBox2.Controls.Add(this.grpBox1);
-            this.groupBox2.Controls.Add(this.grpBox2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 137);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 242);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Backup and Restore Settings";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Chọn thư mục";
             // 
-            // rdBackup
+            // txtDatabaseName
             // 
-            this.rdBackup.AutoSize = true;
-            this.rdBackup.Location = new System.Drawing.Point(18, 22);
-            this.rdBackup.Name = "rdBackup";
-            this.rdBackup.Size = new System.Drawing.Size(62, 17);
-            this.rdBackup.TabIndex = 16;
-            this.rdBackup.TabStop = true;
-            this.rdBackup.Text = "Backup";
-            this.rdBackup.UseVisualStyleBackColor = true;
-            this.rdBackup.CheckedChanged += new System.EventHandler(this.rdBackup_CheckedChanged);
-            // 
-            // rdRestore
-            // 
-            this.rdRestore.AutoSize = true;
-            this.rdRestore.Location = new System.Drawing.Point(86, 22);
-            this.rdRestore.Name = "rdRestore";
-            this.rdRestore.Size = new System.Drawing.Size(62, 17);
-            this.rdRestore.TabIndex = 17;
-            this.rdRestore.TabStop = true;
-            this.rdRestore.Text = "Restore";
-            this.rdRestore.UseVisualStyleBackColor = true;
-            this.rdRestore.CheckedChanged += new System.EventHandler(this.rdRestore_CheckedChanged);
+            this.txtDatabaseName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatabaseName.Location = new System.Drawing.Point(109, 20);
+            this.txtDatabaseName.Name = "txtDatabaseName";
+            this.txtDatabaseName.Size = new System.Drawing.Size(207, 20);
+            this.txtDatabaseName.TabIndex = 15;
             // 
             // label4
             // 
@@ -280,9 +261,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(14, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Database Name";
+            this.label4.Text = "Tên Database";
             // 
             // txtSelectPath
             // 
@@ -306,23 +287,42 @@
             this.btnPathBrowse.UseVisualStyleBackColor = true;
             this.btnPathBrowse.Click += new System.EventHandler(this.btnPathBrowse_Click);
             // 
-            // txtDatabaseName
+            // groupBox2
             // 
-            this.txtDatabaseName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDatabaseName.Location = new System.Drawing.Point(109, 20);
-            this.txtDatabaseName.Name = "txtDatabaseName";
-            this.txtDatabaseName.Size = new System.Drawing.Size(207, 20);
-            this.txtDatabaseName.TabIndex = 15;
+            this.groupBox2.Controls.Add(this.rdRestore);
+            this.groupBox2.Controls.Add(this.rdBackup);
+            this.groupBox2.Controls.Add(this.grpBox1);
+            this.groupBox2.Controls.Add(this.grpBox2);
+            this.groupBox2.Location = new System.Drawing.Point(12, 137);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(410, 242);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cài Đặt Backup and Restore";
             // 
-            // label7
+            // rdRestore
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Select Path";
+            this.rdRestore.AutoSize = true;
+            this.rdRestore.Location = new System.Drawing.Point(86, 22);
+            this.rdRestore.Name = "rdRestore";
+            this.rdRestore.Size = new System.Drawing.Size(62, 17);
+            this.rdRestore.TabIndex = 17;
+            this.rdRestore.TabStop = true;
+            this.rdRestore.Text = "Restore";
+            this.rdRestore.UseVisualStyleBackColor = true;
+            this.rdRestore.CheckedChanged += new System.EventHandler(this.rdRestore_CheckedChanged);
+            // 
+            // rdBackup
+            // 
+            this.rdBackup.AutoSize = true;
+            this.rdBackup.Location = new System.Drawing.Point(18, 22);
+            this.rdBackup.Name = "rdBackup";
+            this.rdBackup.Size = new System.Drawing.Size(62, 17);
+            this.rdBackup.TabIndex = 16;
+            this.rdBackup.TabStop = true;
+            this.rdBackup.Text = "Backup";
+            this.rdBackup.UseVisualStyleBackColor = true;
+            this.rdBackup.CheckedChanged += new System.EventHandler(this.rdBackup_CheckedChanged);
             // 
             // openFile
             // 

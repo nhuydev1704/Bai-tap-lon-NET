@@ -79,6 +79,7 @@
             this.dataStudentFeeView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataStudentFeeView.Size = new System.Drawing.Size(655, 257);
             this.dataStudentFeeView.TabIndex = 1;
+            this.dataStudentFeeView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataStudentFeeView_CellContentClick);
             // 
             // btnClose
             // 
@@ -87,7 +88,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(122, 40);
             this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Đóng";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

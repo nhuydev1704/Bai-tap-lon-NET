@@ -52,20 +52,6 @@
             this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataStudentView = new System.Windows.Forms.DataGridView();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentPic = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbSemester = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -83,6 +69,20 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentPic = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataStudentView)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStudent)).BeginInit();
@@ -423,105 +423,6 @@
             this.dataStudentView.TabIndex = 6;
             this.dataStudentView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataStudentRegisterView_CellClick);
             // 
-            // SID
-            // 
-            this.SID.HeaderText = "StudentId";
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            this.SID.Visible = false;
-            // 
-            // RollNo
-            // 
-            this.RollNo.FillWeight = 105.5838F;
-            this.RollNo.HeaderText = "MaSV";
-            this.RollNo.Name = "RollNo";
-            this.RollNo.ReadOnly = true;
-            // 
-            // StudentName
-            // 
-            this.StudentName.FillWeight = 105.5838F;
-            this.StudentName.HeaderText = "tenSV";
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.FillWeight = 105.5838F;
-            this.Gender.HeaderText = "Gioitinh";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.FillWeight = 105.5838F;
-            this.Address.HeaderText = "DiaChi";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // DOB
-            // 
-            this.DOB.FillWeight = 105.5838F;
-            this.DOB.HeaderText = "NgaySinh";
-            this.DOB.Name = "DOB";
-            this.DOB.ReadOnly = true;
-            // 
-            // AdmissionDate
-            // 
-            this.AdmissionDate.FillWeight = 105.5838F;
-            this.AdmissionDate.HeaderText = "NgayNhapHoc";
-            this.AdmissionDate.Name = "AdmissionDate";
-            this.AdmissionDate.ReadOnly = true;
-            // 
-            // PhoneNo
-            // 
-            this.PhoneNo.FillWeight = 105.5838F;
-            this.PhoneNo.HeaderText = "SDT";
-            this.PhoneNo.Name = "PhoneNo";
-            this.PhoneNo.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.FillWeight = 105.5838F;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Country
-            // 
-            this.Country.FillWeight = 105.5838F;
-            this.Country.HeaderText = "Tinh";
-            this.Country.Name = "Country";
-            this.Country.ReadOnly = true;
-            // 
-            // Shift
-            // 
-            this.Shift.FillWeight = 105.5838F;
-            this.Shift.HeaderText = "ThayDoi";
-            this.Shift.Name = "Shift";
-            this.Shift.ReadOnly = true;
-            // 
-            // Course
-            // 
-            this.Course.FillWeight = 105.5838F;
-            this.Course.HeaderText = "MonHoc";
-            this.Course.Name = "Course";
-            this.Course.ReadOnly = true;
-            // 
-            // Semester
-            // 
-            this.Semester.FillWeight = 105.5838F;
-            this.Semester.HeaderText = "HocKy";
-            this.Semester.Name = "Semester";
-            this.Semester.ReadOnly = true;
-            // 
-            // StudentPic
-            // 
-            this.StudentPic.FillWeight = 105F;
-            this.StudentPic.HeaderText = "HinhAnh";
-            this.StudentPic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.StudentPic.Name = "StudentPic";
-            this.StudentPic.ReadOnly = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cmbSemester);
@@ -690,9 +591,9 @@
             this.cmbFilter.FormattingEnabled = true;
             this.cmbFilter.Items.AddRange(new object[] {
             "(None)",
-            "Roll no",
-            "Student name",
-            "Phone no",
+            "Mã Sinh Viên",
+            "Tên Sinh Viên",
+            "Số Điện Thoại",
             "Email"});
             this.cmbFilter.Location = new System.Drawing.Point(64, 20);
             this.cmbFilter.Name = "cmbFilter";
@@ -724,6 +625,105 @@
             // saveFileDialog1
             // 
             this.saveFileDialog1.Filter = "Excel 2003|*.xls|Excel 2007|*.xlsx";
+            // 
+            // SID
+            // 
+            this.SID.HeaderText = "StudentId";
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Visible = false;
+            // 
+            // RollNo
+            // 
+            this.RollNo.FillWeight = 105.5838F;
+            this.RollNo.HeaderText = "MaSV";
+            this.RollNo.Name = "RollNo";
+            this.RollNo.ReadOnly = true;
+            // 
+            // StudentName
+            // 
+            this.StudentName.FillWeight = 105.5838F;
+            this.StudentName.HeaderText = "tenSV";
+            this.StudentName.Name = "StudentName";
+            this.StudentName.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.FillWeight = 105.5838F;
+            this.Gender.HeaderText = "Gioitinh";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.FillWeight = 105.5838F;
+            this.Address.HeaderText = "DiaChi";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // DOB
+            // 
+            this.DOB.FillWeight = 105.5838F;
+            this.DOB.HeaderText = "NgaySinh";
+            this.DOB.Name = "DOB";
+            this.DOB.ReadOnly = true;
+            // 
+            // AdmissionDate
+            // 
+            this.AdmissionDate.FillWeight = 105.5838F;
+            this.AdmissionDate.HeaderText = "NgayNhapHoc";
+            this.AdmissionDate.Name = "AdmissionDate";
+            this.AdmissionDate.ReadOnly = true;
+            // 
+            // PhoneNo
+            // 
+            this.PhoneNo.FillWeight = 105.5838F;
+            this.PhoneNo.HeaderText = "SDT";
+            this.PhoneNo.Name = "PhoneNo";
+            this.PhoneNo.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.FillWeight = 105.5838F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Country
+            // 
+            this.Country.FillWeight = 105.5838F;
+            this.Country.HeaderText = "Tinh";
+            this.Country.Name = "Country";
+            this.Country.ReadOnly = true;
+            // 
+            // Shift
+            // 
+            this.Shift.FillWeight = 105.5838F;
+            this.Shift.HeaderText = "Thời Gian";
+            this.Shift.Name = "Shift";
+            this.Shift.ReadOnly = true;
+            // 
+            // Course
+            // 
+            this.Course.FillWeight = 105.5838F;
+            this.Course.HeaderText = "MonHoc";
+            this.Course.Name = "Course";
+            this.Course.ReadOnly = true;
+            // 
+            // Semester
+            // 
+            this.Semester.FillWeight = 105.5838F;
+            this.Semester.HeaderText = "HocKy";
+            this.Semester.Name = "Semester";
+            this.Semester.ReadOnly = true;
+            // 
+            // StudentPic
+            // 
+            this.StudentPic.FillWeight = 105F;
+            this.StudentPic.HeaderText = "HinhAnh";
+            this.StudentPic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.StudentPic.Name = "StudentPic";
+            this.StudentPic.ReadOnly = true;
             // 
             // frmStudentRegister
             // 
@@ -801,6 +801,8 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cmbFilter;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
@@ -815,7 +817,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Course;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semester;
         private System.Windows.Forms.DataGridViewImageColumn StudentPic;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

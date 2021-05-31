@@ -61,41 +61,41 @@ namespace CollegeManagementSystem.Student
             bool isValid = true;
             if (txtRollNo.Text == string.Empty)
             {
-                MessageBox.Show("Roll number is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Số điện thoại bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtRollNo.Focus();
                 isValid = false;
             }
             else
                 if (txtStudentName.Text == string.Empty)
                 {
-                    MessageBox.Show("Student name is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Tên sinh viên bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtStudentName.Focus();
                     isValid = false;
                 }
                 else
                     if (rdMale.Checked == false && rdFemale.Checked == false)
                     {
-                        MessageBox.Show("Select Gender.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Chọn giới tính.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         isValid = false;
                     }
                     else
                         if (txtAddress.Text == string.Empty)
                         {
-                            MessageBox.Show("Address is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Địa chỉ bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             txtAddress.Focus();
                             isValid = false;
                         }
                         else
                             if (txtPhoneNo.Text == string.Empty)
                             {
-                                MessageBox.Show("Phone number is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Số điện thoại bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 txtPhoneNo.Focus();
                                 isValid = false;
                             }
                             else
                                 if (!objGlobal.IsAllDigits(txtPhoneNo.Text))
                                 {
-                                    MessageBox.Show("Phone no can not accepted charecter", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Số điện thoại không là kí tự", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     txtPhoneNo.Focus();
                                     txtPhoneNo.SelectAll();
                                     isValid = false;
@@ -103,7 +103,7 @@ namespace CollegeManagementSystem.Student
                                 else
                                     if (txtPhoneNo.Text.Trim().Length > 17 || txtPhoneNo.Text.Trim().Length < 10)
                                     {
-                                        MessageBox.Show("Phone number length must be between 10 to 17 digits accept.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        MessageBox.Show("Số điện thoại từ 10 đến 17 số.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                         txtPhoneNo.SelectAll();
                                         txtPhoneNo.Focus();
                                         isValid = false;
@@ -111,7 +111,7 @@ namespace CollegeManagementSystem.Student
                                     else
                                         if (txtEmail.Text == string.Empty)
                                         {
-                                            MessageBox.Show("Email id is required.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                            MessageBox.Show("Email bắt buộc.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                             txtEmail.Focus();
                                             isValid = false;
                                         }
@@ -258,13 +258,13 @@ namespace CollegeManagementSystem.Student
         {
             switch (ListType)
             {
-                case "Roll no":
+                case "Mã Sinh Viên":
                     GetDataBind("SELECT * From Regstudent WHERE RollNo='" + getText.Trim() + "'");
                     break;
-                case "Student name":
+                case "Tên Sinh Viên":
                     GetDataBind("SELECT * From Regstudent WHERE StudentName='" + getText.Trim() + "'");
                     break;
-                case "Phone no":
+                case "Số Điện Thoại":
                     GetDataBind("SELECT * From Regstudent WHERE PhoneNo='" + getText.Trim() + "'");
                     break;
                 case "Email":
@@ -281,7 +281,7 @@ namespace CollegeManagementSystem.Student
                 return;
             if (!e.IsValidInput)
             {
-                MessageBox.Show("Date of birth or Empty\nThe Date supplied must be a valid date in the format dd/mm/yyyy.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ngày tháng năm sinh theo định dạng dd/mm/yyyy.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Cancel = true;
                 mtxtDOB.Focus();
                 mtxtDOB.SelectAll();
@@ -294,7 +294,7 @@ namespace CollegeManagementSystem.Student
                 return;
             if (!e.IsValidInput)
             {
-                MessageBox.Show("Addmision Date or Empty\nThe Date supplied must be a valid date in the format dd/mm/yyyy.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ngày tháng năm sinh theo định dạng dd/mm/yyyy.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Cancel = true;
                 mtxtAdmissionDate.Focus();
                 mtxtAdmissionDate.SelectAll();
@@ -406,7 +406,7 @@ namespace CollegeManagementSystem.Student
                 objStudentDetails.Course = cmbCourse.Text;
                 objStudentDetails.Semester = cmbSemester.Text;
                 objStudentDetails.AddStuAdmission();
-                MessageBox.Show("Saved Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearAll();
                 dataStudentView.Rows.Clear();
                 BindData();
@@ -448,7 +448,7 @@ namespace CollegeManagementSystem.Student
                 objStudentDetails.Course = cmbCourse.Text;
                 objStudentDetails.Semester = cmbSemester.Text;
                 objStudentDetails.UpdateStuAdmission();
-                MessageBox.Show("Update Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearAll();
                 dataStudentView.Rows.Clear();
                 BindData();
@@ -467,12 +467,12 @@ namespace CollegeManagementSystem.Student
             try
             {
                 DialogResult Result;
-                Result = MessageBox.Show("Are you sure you want delete record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Bạn có muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     objStudentDetails.SId = StudentId.ToString();
                     objStudentDetails.DeleteStuAdmission();
-                    MessageBox.Show("Delete Successfully.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa thành công.", Global.Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearAll();
                     dataStudentView.Rows.Clear();
                     BindData();

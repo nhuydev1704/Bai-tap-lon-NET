@@ -26,7 +26,7 @@ namespace CollegeManagementSystem
 
         private void ViewStudentFeeRecord()
         {
-            string QueryData = "SELECT * FROM FeeMaster JOIN FeeDetails ON FeeMaster.FeeID = FeeDetails.FeeID";
+            string QueryData = "SELECT FeeMaster.FeeId as 'Mã Học Phí',FeeMaster.StudentName as 'Tên Sinh Viên',FeeMaster.RollNo as  'Mã Sinh Viên',FeeMaster.Course as  'Khóa Học',FeeMaster.Semester as  'Học Kỳ',FeeDetails.CategoryName as  'Danh Mục',FeeDetails.PaidDate as  'Ngày Thanh Toán',FeeDetails.TotalAmount as  'Tổng Số Tiền',FeeDetails.PaidAmount as  'Đã Thanh Toán',FeeDetails.DueAmount as  'Còn Lại' FROM FeeMaster JOIN FeeDetails ON FeeMaster.FeeID = FeeDetails.FeeID";
             SqlDataAdapter Adpt = new SqlDataAdapter(QueryData, DatabaseConnection.Con);
             DataSet Dset = new DataSet();
             Adpt.Fill(Dset, "StudentFeeView");
@@ -37,7 +37,7 @@ namespace CollegeManagementSystem
         {
             try
             {
-                string QueryData = "SELECT * FROM FeeMaster JOIN FeeDetails ON FeeMaster.FeeID = FeeDetails.FeeID Where";
+                string QueryData = "SELECT FeeMaster.FeeId as 'Mã Học Phí',FeeMaster.StudentName as 'Tên Sinh Viên',FeeMaster.RollNo as  'Mã Sinh Viên',FeeMaster.Course as  'Khóa Học',FeeMaster.Semester as  'Học Kỳ',FeeDetails.CategoryName as  'Danh Mục',FeeDetails.PaidDate as  'Ngày Thanh Toán',FeeDetails.TotalAmount as  'Tổng Số Tiền',FeeDetails.PaidAmount as  'Đã Thanh Toán',FeeDetails.DueAmount as  'Còn Lại' FROM FeeMaster JOIN FeeDetails ON FeeMaster.FeeID = FeeDetails.FeeID Where";
                 QueryData = QueryData + " FeeMaster.StudentName like '" + txtSearchbyStuName.Text.Trim() + "%'";
                 SqlDataAdapter Adpt = new SqlDataAdapter(QueryData, DatabaseConnection.Con);
                 DataSet Dset = new DataSet();
@@ -53,6 +53,11 @@ namespace CollegeManagementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dataStudentFeeView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

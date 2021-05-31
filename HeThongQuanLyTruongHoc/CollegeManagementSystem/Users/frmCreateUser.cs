@@ -70,21 +70,21 @@ namespace CollegeManagementSystem.Users
             if (txtUserName.Text == string.Empty)
             {
                 this.lblMessageBox.ForeColor = Color.Red;
-                this.lblMessageBox.Text = "User name is required.";
+                this.lblMessageBox.Text = "Tên là bắt buộc.";
                 txtUserName.Focus();
                 isValid = false;
             }
             if (!string.IsNullOrEmpty(objCon.GetSqlData("Select UserName From ULogin Where UserName='" + txtUserName.Text + "'")))
             {
                 this.lblMessageBox.ForeColor = Color.Red;
-                this.lblMessageBox.Text = "A duplicate user name can not accepted.";
+                this.lblMessageBox.Text = "Tên người dùng tồn tại.";
                 txtUserName.Focus();
                 txtUserName.SelectAll();
                 isValid = false; ;
             }
             if (objGlobal.IsAllDigits(txtUserName.Text))
             {
-                this.lblMessageBox.Text = "User name can not accepted digits";
+                this.lblMessageBox.Text = "Tên người dùng không thể toàn số";
                 txtUserName.Focus();
                 txtUserName.SelectAll();
                 isValid = false;
@@ -98,20 +98,20 @@ namespace CollegeManagementSystem.Users
             if (txtLoginName.Text == string.Empty)
             {
                 this.lblMessageBox.ForeColor = Color.Red;
-                this.lblMessageBox.Text = "Login name is required.";
+                this.lblMessageBox.Text = "Tên đăng nhập bắt buộc.";
                 txtLoginName.Focus();
                 isValid = false; ;
             }
             if (txtPassword.Text == string.Empty)
             {
                 this.lblMessageBox.ForeColor = Color.Red;
-                this.lblMessageBox.Text = "Password is required.";
+                this.lblMessageBox.Text = "Mật khẩu bắt buộc.";
                 txtPassword.Focus();
                 isValid = false; ;
             }
             if (txtPassword.Text.Trim().Length > 15 || txtPassword.Text.Trim().Length < 6)
             {
-                this.lblMessageBox.Text = "Password length must be between 6 to 15 digits accept.";
+                this.lblMessageBox.Text = "Mật khẩu từ 6 đến 15 kí tự.";
                 txtPassword.SelectAll();
                 txtPassword.Focus();
                 isValid = false;
@@ -119,13 +119,13 @@ namespace CollegeManagementSystem.Users
             if (txtConfirmPSW.Text == string.Empty)
             {
                 this.lblMessageBox.ForeColor = Color.Red;
-                this.lblMessageBox.Text = "Confirm password is empty.";
+                this.lblMessageBox.Text = "Mật khẩu nhập lại bỏ trống.";
                 txtConfirmPSW.Focus();
                 isValid = false; ;
             }
             if (txtConfirmPSW.Text.Trim().Length > 15 || txtConfirmPSW.Text.Trim().Length < 6)
             {
-                this.lblMessageBox.Text = "Confirm password length must be between 6 to 15 digits accept.";
+                this.lblMessageBox.Text = "Độ dài mật khẩu nhập lại từ 6 đến 15 kí tự.";
                 txtPassword.SelectAll();
                 txtPassword.Focus();
                 isValid = false;
@@ -133,7 +133,7 @@ namespace CollegeManagementSystem.Users
             if (txtPassword.Text != txtConfirmPSW.Text)
             {
                 this.lblMessageBox.ForeColor = Color.Red;
-                this.lblMessageBox.Text = "Password or confirm password is not matched.";
+                this.lblMessageBox.Text = "Mật khẩu nhập lại không trùng khớp.";
                 txtConfirmPSW.Clear();
                 txtPassword.Focus();
                 txtPassword.SelectAll();
@@ -255,7 +255,7 @@ namespace CollegeManagementSystem.Users
                     {
                         ObjUserClass.CreateNewUser();
                         this.lblMessageBox.ForeColor = Color.Green;
-                        this.lblMessageBox.Text = "New user create successfully.";
+                        this.lblMessageBox.Text = "Tạo người dùng mới thành công.";
                         ResetAll();
                         GenerateNumber();
                         dataUsersView.Rows.Clear();
@@ -276,14 +276,14 @@ namespace CollegeManagementSystem.Users
                 if (txtConfirmPSW.Text == string.Empty)
                 {
                     this.lblMessageBox.ForeColor = Color.Red;
-                    this.lblMessageBox.Text = "Confirm password is empty.";
+                    this.lblMessageBox.Text = "Mật khẩu nhập lại không được để trống.";
                     txtConfirmPSW.Focus();
                     return;
                 }
                 if (txtPassword.Text != txtConfirmPSW.Text)
                 {
                     this.lblMessageBox.ForeColor = Color.Red;
-                    this.lblMessageBox.Text = "Password or confirm password is not matched.";
+                    this.lblMessageBox.Text = "Mật khẩu nhập lại không trùng khớp.";
                     txtConfirmPSW.Clear();
                     txtPassword.Focus();
                     txtPassword.SelectAll();
@@ -307,7 +307,7 @@ namespace CollegeManagementSystem.Users
 
                     ObjUserClass.UpdateUsers();
                     this.lblMessageBox.ForeColor = Color.Green;
-                    this.lblMessageBox.Text = "Update Successfully.";
+                    this.lblMessageBox.Text = "Cập nhật thành công.";
                     ResetAll();
                     dataUsersView.Rows.Clear();
                     BindData();
@@ -325,13 +325,13 @@ namespace CollegeManagementSystem.Users
             try
             {
                 DialogResult Result;
-                Result = MessageBox.Show("Do you want to delete this record?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Bạn có muốn xóa?", Global.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     ObjUserClass.UserId = _UId;
                     ObjUserClass.DeleteUser();
                     this.lblMessageBox.ForeColor = Color.Green;
-                    this.lblMessageBox.Text = "Delete Successfully.";
+                    this.lblMessageBox.Text = "Xóa thành công.";
                     ResetAll();
                     dataUsersView.Rows.Clear();
                     BindData();
