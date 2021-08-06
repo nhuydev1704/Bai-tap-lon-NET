@@ -1397,16 +1397,23 @@ SELECT Id, RollNo, StudentName, Gender, Address, DateOfBirth, AdmissionDate, Pho
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, RollNo, StudentName, Gender, Address, DateOfBirth, AdmissionDat" +
                 "e, PhoneNo, Email, Country, Shift, Course, Semester, StudentPic\r\nFROM           " +
-                " RegStudent";
+                " RegStudent\r\nWHERE        (Course = @Course)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Course", global::System.Data.SqlDbType.NVarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Course", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CollegeDataSet.RegStudentDataTable dataTable) {
+        public virtual int Fill(CollegeDataSet.RegStudentDataTable dataTable, string Course) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Course == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Course));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1418,8 +1425,14 @@ SELECT Id, RollNo, StudentName, Gender, Address, DateOfBirth, AdmissionDate, Pho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CollegeDataSet.RegStudentDataTable GetData() {
+        public virtual CollegeDataSet.RegStudentDataTable GetData(string Course) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Course == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Course));
+            }
             CollegeDataSet.RegStudentDataTable dataTable = new CollegeDataSet.RegStudentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

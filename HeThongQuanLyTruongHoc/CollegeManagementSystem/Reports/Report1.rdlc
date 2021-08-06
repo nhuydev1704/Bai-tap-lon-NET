@@ -6,26 +6,26 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.03125in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.39062in</Height>
+              <Height>0.41666in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox2">
+                    <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Student Pic</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>6pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -34,13 +34,47 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#869286</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>#708270</BackgroundColor>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.28125in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -51,38 +85,22 @@
                 </TablixCell>
               </TablixCells>
             </TablixRow>
-            <TablixRow>
-              <Height>0.39062in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Image Name="Image1">
-                      <Source>Database</Source>
-                      <Value>=Fields!StudentPic.Value</Value>
-                      <MIMEType>image/jpeg</MIMEType>
-                      <Sizing>FitProportional</Sizing>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                      </Style>
-                    </Image>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
+            <TablixMember>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
+            </TablixMember>
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>1in</Size>
+                <Size>0.19232in</Size>
                 <CellContents>
                   <Textbox Name="Textbox27">
                     <CanGrow>true</CanGrow>
@@ -94,7 +112,7 @@
                             <Value>Id</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>6pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                               <Color>White</Color>
                             </Style>
@@ -110,10 +128,10 @@
                         <Style>Solid</Style>
                       </Border>
                       <BackgroundColor>#708270</BackgroundColor>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
+                      <PaddingLeft>1pt</PaddingLeft>
+                      <PaddingRight>1pt</PaddingRight>
+                      <PaddingTop>1pt</PaddingTop>
+                      <PaddingBottom>1pt</PaddingBottom>
                     </Style>
                   </Textbox>
                 </CellContents>
@@ -121,7 +139,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1in</Size>
+                    <Size>0.50816in</Size>
                     <CellContents>
                       <Textbox Name="Textbox25">
                         <CanGrow>true</CanGrow>
@@ -130,10 +148,10 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Roll No</Value>
+                                <Value>Mã Sinh Viên</Value>
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
-                                  <FontSize>11pt</FontSize>
+                                  <FontSize>6pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -149,10 +167,10 @@
                             <Style>Solid</Style>
                           </Border>
                           <BackgroundColor>#708270</BackgroundColor>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
+                          <PaddingLeft>1pt</PaddingLeft>
+                          <PaddingRight>1pt</PaddingRight>
+                          <PaddingTop>1pt</PaddingTop>
+                          <PaddingBottom>1pt</PaddingBottom>
                         </Style>
                       </Textbox>
                     </CellContents>
@@ -160,7 +178,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1in</Size>
+                        <Size>0.57603in</Size>
                         <CellContents>
                           <Textbox Name="Textbox23">
                             <CanGrow>true</CanGrow>
@@ -169,10 +187,10 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Student Name</Value>
+                                    <Value>Tên Sinh Viên</Value>
                                     <Style>
                                       <FontFamily>Times New Roman</FontFamily>
-                                      <FontSize>11pt</FontSize>
+                                      <FontSize>6pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -188,10 +206,10 @@
                                 <Style>Solid</Style>
                               </Border>
                               <BackgroundColor>#708270</BackgroundColor>
-                              <PaddingLeft>2pt</PaddingLeft>
-                              <PaddingRight>2pt</PaddingRight>
-                              <PaddingTop>2pt</PaddingTop>
-                              <PaddingBottom>2pt</PaddingBottom>
+                              <PaddingLeft>1pt</PaddingLeft>
+                              <PaddingRight>1pt</PaddingRight>
+                              <PaddingTop>1pt</PaddingTop>
+                              <PaddingBottom>1pt</PaddingBottom>
                             </Style>
                           </Textbox>
                         </CellContents>
@@ -199,7 +217,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1in</Size>
+                            <Size>0.35665in</Size>
                             <CellContents>
                               <Textbox Name="Textbox21">
                                 <CanGrow>true</CanGrow>
@@ -208,10 +226,10 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Gender</Value>
+                                        <Value>Giới tính</Value>
                                         <Style>
                                           <FontFamily>Times New Roman</FontFamily>
-                                          <FontSize>11pt</FontSize>
+                                          <FontSize>6pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Color>White</Color>
                                         </Style>
@@ -227,10 +245,10 @@
                                     <Style>Solid</Style>
                                   </Border>
                                   <BackgroundColor>#708270</BackgroundColor>
-                                  <PaddingLeft>2pt</PaddingLeft>
-                                  <PaddingRight>2pt</PaddingRight>
-                                  <PaddingTop>2pt</PaddingTop>
-                                  <PaddingBottom>2pt</PaddingBottom>
+                                  <PaddingLeft>1pt</PaddingLeft>
+                                  <PaddingRight>1pt</PaddingRight>
+                                  <PaddingTop>1pt</PaddingTop>
+                                  <PaddingBottom>1pt</PaddingBottom>
                                 </Style>
                               </Textbox>
                             </CellContents>
@@ -238,7 +256,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>1in</Size>
+                                <Size>0.35874in</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox19">
                                     <CanGrow>true</CanGrow>
@@ -247,10 +265,10 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>Address</Value>
+                                            <Value>Địa chỉ</Value>
                                             <Style>
                                               <FontFamily>Times New Roman</FontFamily>
-                                              <FontSize>11pt</FontSize>
+                                              <FontSize>6pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                               <Color>White</Color>
                                             </Style>
@@ -266,10 +284,10 @@
                                         <Style>Solid</Style>
                                       </Border>
                                       <BackgroundColor>#708270</BackgroundColor>
-                                      <PaddingLeft>2pt</PaddingLeft>
-                                      <PaddingRight>2pt</PaddingRight>
-                                      <PaddingTop>2pt</PaddingTop>
-                                      <PaddingBottom>2pt</PaddingBottom>
+                                      <PaddingLeft>1pt</PaddingLeft>
+                                      <PaddingRight>1pt</PaddingRight>
+                                      <PaddingTop>1pt</PaddingTop>
+                                      <PaddingBottom>1pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
                                 </CellContents>
@@ -277,7 +295,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>1in</Size>
+                                    <Size>0.40476in</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox17">
                                         <CanGrow>true</CanGrow>
@@ -286,10 +304,10 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>Date Of Birth</Value>
+                                                <Value>Ngày Sinh</Value>
                                                 <Style>
                                                   <FontFamily>Times New Roman</FontFamily>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontSize>6pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                   <Color>White</Color>
                                                 </Style>
@@ -305,10 +323,10 @@
                                             <Style>Solid</Style>
                                           </Border>
                                           <BackgroundColor>#708270</BackgroundColor>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
+                                          <PaddingLeft>1pt</PaddingLeft>
+                                          <PaddingRight>1pt</PaddingRight>
+                                          <PaddingTop>1pt</PaddingTop>
+                                          <PaddingBottom>1pt</PaddingBottom>
                                         </Style>
                                       </Textbox>
                                     </CellContents>
@@ -316,7 +334,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>1in</Size>
+                                        <Size>0.53634in</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox15">
                                             <CanGrow>true</CanGrow>
@@ -325,10 +343,10 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>Admission Date</Value>
+                                                    <Value>Ngày nhập học</Value>
                                                     <Style>
                                                       <FontFamily>Times New Roman</FontFamily>
-                                                      <FontSize>11pt</FontSize>
+                                                      <FontSize>6pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Color>White</Color>
                                                     </Style>
@@ -344,10 +362,10 @@
                                                 <Style>Solid</Style>
                                               </Border>
                                               <BackgroundColor>#708270</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
+                                              <PaddingLeft>1pt</PaddingLeft>
+                                              <PaddingRight>1pt</PaddingRight>
+                                              <PaddingTop>1pt</PaddingTop>
+                                              <PaddingBottom>1pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
                                         </CellContents>
@@ -355,7 +373,7 @@
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>1in</Size>
+                                            <Size>0.56164in</Size>
                                             <CellContents>
                                               <Textbox Name="Textbox13">
                                                 <CanGrow>true</CanGrow>
@@ -364,10 +382,10 @@
                                                   <Paragraph>
                                                     <TextRuns>
                                                       <TextRun>
-                                                        <Value>Phone No</Value>
+                                                        <Value>Số điện thoại</Value>
                                                         <Style>
                                                           <FontFamily>Times New Roman</FontFamily>
-                                                          <FontSize>11pt</FontSize>
+                                                          <FontSize>6pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                           <Color>White</Color>
                                                         </Style>
@@ -383,10 +401,10 @@
                                                     <Style>Solid</Style>
                                                   </Border>
                                                   <BackgroundColor>#708270</BackgroundColor>
-                                                  <PaddingLeft>2pt</PaddingLeft>
-                                                  <PaddingRight>2pt</PaddingRight>
-                                                  <PaddingTop>2pt</PaddingTop>
-                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                  <PaddingLeft>1pt</PaddingLeft>
+                                                  <PaddingRight>1pt</PaddingRight>
+                                                  <PaddingTop>1pt</PaddingTop>
+                                                  <PaddingBottom>1pt</PaddingBottom>
                                                 </Style>
                                               </Textbox>
                                             </CellContents>
@@ -394,7 +412,7 @@
                                           <TablixMembers>
                                             <TablixMember>
                                               <TablixHeader>
-                                                <Size>1in</Size>
+                                                <Size>0.31102in</Size>
                                                 <CellContents>
                                                   <Textbox Name="Textbox11">
                                                     <CanGrow>true</CanGrow>
@@ -406,7 +424,7 @@
                                                             <Value>Email</Value>
                                                             <Style>
                                                               <FontFamily>Times New Roman</FontFamily>
-                                                              <FontSize>11pt</FontSize>
+                                                              <FontSize>6pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
                                                               <Color>White</Color>
                                                             </Style>
@@ -422,10 +440,10 @@
                                                         <Style>Solid</Style>
                                                       </Border>
                                                       <BackgroundColor>#708270</BackgroundColor>
-                                                      <PaddingLeft>2pt</PaddingLeft>
-                                                      <PaddingRight>2pt</PaddingRight>
-                                                      <PaddingTop>2pt</PaddingTop>
-                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                      <PaddingLeft>1pt</PaddingLeft>
+                                                      <PaddingRight>1pt</PaddingRight>
+                                                      <PaddingTop>1pt</PaddingTop>
+                                                      <PaddingBottom>1pt</PaddingBottom>
                                                     </Style>
                                                   </Textbox>
                                                 </CellContents>
@@ -433,7 +451,7 @@
                                               <TablixMembers>
                                                 <TablixMember>
                                                   <TablixHeader>
-                                                    <Size>1in</Size>
+                                                    <Size>0.46937in</Size>
                                                     <CellContents>
                                                       <Textbox Name="Textbox9">
                                                         <CanGrow>true</CanGrow>
@@ -442,10 +460,10 @@
                                                           <Paragraph>
                                                             <TextRuns>
                                                               <TextRun>
-                                                                <Value>Country</Value>
+                                                                <Value>Tỉnh thành</Value>
                                                                 <Style>
                                                                   <FontFamily>Times New Roman</FontFamily>
-                                                                  <FontSize>11pt</FontSize>
+                                                                  <FontSize>6pt</FontSize>
                                                                   <FontWeight>Bold</FontWeight>
                                                                   <Color>White</Color>
                                                                 </Style>
@@ -461,10 +479,10 @@
                                                             <Style>Solid</Style>
                                                           </Border>
                                                           <BackgroundColor>#708270</BackgroundColor>
-                                                          <PaddingLeft>2pt</PaddingLeft>
-                                                          <PaddingRight>2pt</PaddingRight>
-                                                          <PaddingTop>2pt</PaddingTop>
-                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                          <PaddingLeft>1pt</PaddingLeft>
+                                                          <PaddingRight>1pt</PaddingRight>
+                                                          <PaddingTop>1pt</PaddingTop>
+                                                          <PaddingBottom>1pt</PaddingBottom>
                                                         </Style>
                                                       </Textbox>
                                                     </CellContents>
@@ -472,7 +490,7 @@
                                                   <TablixMembers>
                                                     <TablixMember>
                                                       <TablixHeader>
-                                                        <Size>1in</Size>
+                                                        <Size>0.39819in</Size>
                                                         <CellContents>
                                                           <Textbox Name="Textbox7">
                                                             <CanGrow>true</CanGrow>
@@ -481,10 +499,10 @@
                                                               <Paragraph>
                                                                 <TextRuns>
                                                                   <TextRun>
-                                                                    <Value>Shift</Value>
+                                                                    <Value>Thời gian</Value>
                                                                     <Style>
                                                                       <FontFamily>Times New Roman</FontFamily>
-                                                                      <FontSize>11pt</FontSize>
+                                                                      <FontSize>6pt</FontSize>
                                                                       <FontWeight>Bold</FontWeight>
                                                                       <Color>White</Color>
                                                                     </Style>
@@ -500,10 +518,10 @@
                                                                 <Style>Solid</Style>
                                                               </Border>
                                                               <BackgroundColor>#708270</BackgroundColor>
-                                                              <PaddingLeft>2pt</PaddingLeft>
-                                                              <PaddingRight>2pt</PaddingRight>
-                                                              <PaddingTop>2pt</PaddingTop>
-                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                              <PaddingLeft>1pt</PaddingLeft>
+                                                              <PaddingRight>1pt</PaddingRight>
+                                                              <PaddingTop>1pt</PaddingTop>
+                                                              <PaddingBottom>1pt</PaddingBottom>
                                                             </Style>
                                                           </Textbox>
                                                         </CellContents>
@@ -511,7 +529,7 @@
                                                       <TablixMembers>
                                                         <TablixMember>
                                                           <TablixHeader>
-                                                            <Size>1in</Size>
+                                                            <Size>0.48488in</Size>
                                                             <CellContents>
                                                               <Textbox Name="Textbox5">
                                                                 <CanGrow>true</CanGrow>
@@ -520,10 +538,10 @@
                                                                   <Paragraph>
                                                                     <TextRuns>
                                                                       <TextRun>
-                                                                        <Value>Course</Value>
+                                                                        <Value>Khóa học</Value>
                                                                         <Style>
                                                                           <FontFamily>Times New Roman</FontFamily>
-                                                                          <FontSize>11pt</FontSize>
+                                                                          <FontSize>6pt</FontSize>
                                                                           <FontWeight>Bold</FontWeight>
                                                                           <Color>White</Color>
                                                                         </Style>
@@ -539,10 +557,10 @@
                                                                     <Style>Solid</Style>
                                                                   </Border>
                                                                   <BackgroundColor>#708270</BackgroundColor>
-                                                                  <PaddingLeft>2pt</PaddingLeft>
-                                                                  <PaddingRight>2pt</PaddingRight>
-                                                                  <PaddingTop>2pt</PaddingTop>
-                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                  <PaddingLeft>1pt</PaddingLeft>
+                                                                  <PaddingRight>1pt</PaddingRight>
+                                                                  <PaddingTop>1pt</PaddingTop>
+                                                                  <PaddingBottom>1pt</PaddingBottom>
                                                                 </Style>
                                                               </Textbox>
                                                             </CellContents>
@@ -550,7 +568,7 @@
                                                           <TablixMembers>
                                                             <TablixMember>
                                                               <TablixHeader>
-                                                                <Size>1in</Size>
+                                                                <Size>0.4323in</Size>
                                                                 <CellContents>
                                                                   <Textbox Name="Textbox3">
                                                                     <CanGrow>true</CanGrow>
@@ -559,10 +577,10 @@
                                                                       <Paragraph>
                                                                         <TextRuns>
                                                                           <TextRun>
-                                                                            <Value>Semester</Value>
+                                                                            <Value>Học kỳ</Value>
                                                                             <Style>
                                                                               <FontFamily>Times New Roman</FontFamily>
-                                                                              <FontSize>11pt</FontSize>
+                                                                              <FontSize>6pt</FontSize>
                                                                               <FontWeight>Bold</FontWeight>
                                                                               <Color>White</Color>
                                                                             </Style>
@@ -578,10 +596,10 @@
                                                                         <Style>Solid</Style>
                                                                       </Border>
                                                                       <BackgroundColor>#708270</BackgroundColor>
-                                                                      <PaddingLeft>2pt</PaddingLeft>
-                                                                      <PaddingRight>2pt</PaddingRight>
-                                                                      <PaddingTop>2pt</PaddingTop>
-                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                      <PaddingLeft>1pt</PaddingLeft>
+                                                                      <PaddingRight>1pt</PaddingRight>
+                                                                      <PaddingTop>1pt</PaddingTop>
+                                                                      <PaddingBottom>1pt</PaddingBottom>
                                                                     </Style>
                                                                   </Textbox>
                                                                 </CellContents>
@@ -626,7 +644,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1in</Size>
+                <Size>0.19232in</Size>
                 <CellContents>
                   <Textbox Name="Id">
                     <CanGrow>true</CanGrow>
@@ -638,7 +656,7 @@
                             <Value>=Fields!Id.Value</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>6pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                               <Color>White</Color>
                             </Style>
@@ -675,7 +693,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1in</Size>
+                    <Size>0.50816in</Size>
                     <CellContents>
                       <Textbox Name="RollNo">
                         <CanGrow>true</CanGrow>
@@ -687,7 +705,7 @@
                                 <Value>=Fields!RollNo.Value</Value>
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
-                                  <FontSize>11pt</FontSize>
+                                  <FontSize>6pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -724,7 +742,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>1in</Size>
+                        <Size>0.57603in</Size>
                         <CellContents>
                           <Textbox Name="StudentName">
                             <CanGrow>true</CanGrow>
@@ -736,7 +754,7 @@
                                     <Value>=Fields!StudentName.Value</Value>
                                     <Style>
                                       <FontFamily>Times New Roman</FontFamily>
-                                      <FontSize>11pt</FontSize>
+                                      <FontSize>6pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -773,7 +791,7 @@
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>1in</Size>
+                            <Size>0.35665in</Size>
                             <CellContents>
                               <Textbox Name="Gender">
                                 <CanGrow>true</CanGrow>
@@ -785,7 +803,7 @@
                                         <Value>=Fields!Gender.Value</Value>
                                         <Style>
                                           <FontFamily>Times New Roman</FontFamily>
-                                          <FontSize>11pt</FontSize>
+                                          <FontSize>6pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Color>White</Color>
                                         </Style>
@@ -822,7 +840,7 @@
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>1in</Size>
+                                <Size>0.35874in</Size>
                                 <CellContents>
                                   <Textbox Name="Address">
                                     <CanGrow>true</CanGrow>
@@ -834,7 +852,7 @@
                                             <Value>=Fields!Address.Value</Value>
                                             <Style>
                                               <FontFamily>Times New Roman</FontFamily>
-                                              <FontSize>11pt</FontSize>
+                                              <FontSize>6pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                               <Color>White</Color>
                                             </Style>
@@ -871,7 +889,7 @@
                                     </SortExpression>
                                   </SortExpressions>
                                   <TablixHeader>
-                                    <Size>1in</Size>
+                                    <Size>0.40476in</Size>
                                     <CellContents>
                                       <Textbox Name="DateOfBirth">
                                         <CanGrow>true</CanGrow>
@@ -883,7 +901,7 @@
                                                 <Value>=Fields!DateOfBirth.Value</Value>
                                                 <Style>
                                                   <FontFamily>Times New Roman</FontFamily>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontSize>6pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                   <Color>White</Color>
                                                 </Style>
@@ -920,7 +938,7 @@
                                         </SortExpression>
                                       </SortExpressions>
                                       <TablixHeader>
-                                        <Size>1in</Size>
+                                        <Size>0.53634in</Size>
                                         <CellContents>
                                           <Textbox Name="AdmissionDate">
                                             <CanGrow>true</CanGrow>
@@ -932,7 +950,7 @@
                                                     <Value>=Fields!AdmissionDate.Value</Value>
                                                     <Style>
                                                       <FontFamily>Times New Roman</FontFamily>
-                                                      <FontSize>11pt</FontSize>
+                                                      <FontSize>6pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Color>White</Color>
                                                     </Style>
@@ -969,7 +987,7 @@
                                             </SortExpression>
                                           </SortExpressions>
                                           <TablixHeader>
-                                            <Size>1in</Size>
+                                            <Size>0.56164in</Size>
                                             <CellContents>
                                               <Textbox Name="PhoneNo">
                                                 <CanGrow>true</CanGrow>
@@ -981,7 +999,7 @@
                                                         <Value>=Fields!PhoneNo.Value</Value>
                                                         <Style>
                                                           <FontFamily>Times New Roman</FontFamily>
-                                                          <FontSize>11pt</FontSize>
+                                                          <FontSize>6pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                           <Color>White</Color>
                                                         </Style>
@@ -1018,7 +1036,7 @@
                                                 </SortExpression>
                                               </SortExpressions>
                                               <TablixHeader>
-                                                <Size>1in</Size>
+                                                <Size>0.31102in</Size>
                                                 <CellContents>
                                                   <Textbox Name="Email">
                                                     <CanGrow>true</CanGrow>
@@ -1030,7 +1048,7 @@
                                                             <Value>=Fields!Email.Value</Value>
                                                             <Style>
                                                               <FontFamily>Times New Roman</FontFamily>
-                                                              <FontSize>11pt</FontSize>
+                                                              <FontSize>6pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
                                                               <Color>White</Color>
                                                             </Style>
@@ -1067,7 +1085,7 @@
                                                     </SortExpression>
                                                   </SortExpressions>
                                                   <TablixHeader>
-                                                    <Size>1in</Size>
+                                                    <Size>0.46937in</Size>
                                                     <CellContents>
                                                       <Textbox Name="Country">
                                                         <CanGrow>true</CanGrow>
@@ -1079,7 +1097,7 @@
                                                                 <Value>=Fields!Country.Value</Value>
                                                                 <Style>
                                                                   <FontFamily>Times New Roman</FontFamily>
-                                                                  <FontSize>11pt</FontSize>
+                                                                  <FontSize>6pt</FontSize>
                                                                   <FontWeight>Bold</FontWeight>
                                                                   <Color>White</Color>
                                                                 </Style>
@@ -1116,7 +1134,7 @@
                                                         </SortExpression>
                                                       </SortExpressions>
                                                       <TablixHeader>
-                                                        <Size>1in</Size>
+                                                        <Size>0.39819in</Size>
                                                         <CellContents>
                                                           <Textbox Name="Shift">
                                                             <CanGrow>true</CanGrow>
@@ -1128,7 +1146,7 @@
                                                                     <Value>=Fields!Shift.Value</Value>
                                                                     <Style>
                                                                       <FontFamily>Times New Roman</FontFamily>
-                                                                      <FontSize>11pt</FontSize>
+                                                                      <FontSize>6pt</FontSize>
                                                                       <FontWeight>Bold</FontWeight>
                                                                       <Color>White</Color>
                                                                     </Style>
@@ -1165,7 +1183,7 @@
                                                             </SortExpression>
                                                           </SortExpressions>
                                                           <TablixHeader>
-                                                            <Size>1in</Size>
+                                                            <Size>0.48488in</Size>
                                                             <CellContents>
                                                               <Textbox Name="Course">
                                                                 <CanGrow>true</CanGrow>
@@ -1177,7 +1195,7 @@
                                                                         <Value>=Fields!Course.Value</Value>
                                                                         <Style>
                                                                           <FontFamily>Times New Roman</FontFamily>
-                                                                          <FontSize>11pt</FontSize>
+                                                                          <FontSize>6pt</FontSize>
                                                                           <FontWeight>Bold</FontWeight>
                                                                           <Color>White</Color>
                                                                         </Style>
@@ -1214,7 +1232,7 @@
                                                                 </SortExpression>
                                                               </SortExpressions>
                                                               <TablixHeader>
-                                                                <Size>1in</Size>
+                                                                <Size>0.4323in</Size>
                                                                 <CellContents>
                                                                   <Textbox Name="Semester">
                                                                     <CanGrow>true</CanGrow>
@@ -1226,7 +1244,7 @@
                                                                             <Value>=Fields!Semester.Value</Value>
                                                                             <Style>
                                                                               <FontFamily>Times New Roman</FontFamily>
-                                                                              <FontSize>11pt</FontSize>
+                                                                              <FontSize>6pt</FontSize>
                                                                               <FontWeight>Bold</FontWeight>
                                                                               <Color>White</Color>
                                                                             </Style>
@@ -1281,20 +1299,167 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Height>0.78125in</Height>
-        <Width>14in</Width>
+        <Top>0.1875in</Top>
+        <Left>0.36616in</Left>
+        <Height>0.69791in</Height>
+        <Width>5.62166in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <FontSize>6pt</FontSize>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.64583in</Height>
+    <Height>2.23958in</Height>
     <Style />
   </Body>
-  <Width>14in</Width>
+  <Width>6.39779in</Width>
   <Page>
+    <PageHeader>
+      <Height>1.45942in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox12">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>CỘNG HÒA XÃ HỘI CHỦ NGHĨ A VIỆT NAM</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox12</rd:DefaultName>
+          <Top>0.58686in</Top>
+          <Left>4.04299in</Left>
+          <Height>0.16791in</Height>
+          <Width>1.91358in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox14">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Độc lập - Tự do - Hạnh phúc</Value>
+                  <Style>
+                    <FontFamily />
+                    <FontSize>6pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>0.78255in</Top>
+          <Left>4.43423in</Left>
+          <Height>0.16667in</Height>
+          <Width>1.09004in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>DANH SÁCH SINH VIÊN KHÓA HỌC LẬP TRÌNH</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox16</rd:DefaultName>
+          <Top>1.09157in</Top>
+          <Left>1.99933in</Left>
+          <Height>0.1875in</Height>
+          <Width>2.01711in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>TRUNG TÂM DẠY LẬP TRÌNH NHƯ Ý</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>0.57297in</Top>
+          <Left>0.43372in</Left>
+          <Height>0.1818in</Height>
+          <Width>1.56561in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
     <TopMargin>1in</TopMargin>

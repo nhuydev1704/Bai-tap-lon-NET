@@ -35,3 +35,6 @@ G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManage
 G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManagementSystem\obj\x86\Debug\HeThongQuanLyTruongHoc.csproj.CopyComplete
 G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManagementSystem\obj\x86\Debug\CollegeManagementSystem.exe
 G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManagementSystem\obj\x86\Debug\CollegeManagementSystem.pdb
+G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManagementSystem\obj\x86\Debug\RdlCompile.cache
+G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManagementSystem\obj\x86\Debug\RdlCompile.compiled
+G:\KyIInam3\.net\BTL\HeThongQuanLyTruongHoc\HeThongQuanLyTruongHoc\CollegeManagementSystem\obj\x86\Debug\CollegeManagementSystem.Reports.StudentReport.resources

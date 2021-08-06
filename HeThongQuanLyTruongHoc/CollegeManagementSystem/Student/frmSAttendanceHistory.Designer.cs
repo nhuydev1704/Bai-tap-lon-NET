@@ -97,7 +97,7 @@
             // 
             this.dataAttendanceHistory.AllowUserToAddRows = false;
             this.dataAttendanceHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataAttendanceHistory.BackgroundColor = System.Drawing.Color.White;
+            this.dataAttendanceHistory.BackgroundColor = System.Drawing.Color.GreenYellow;
             this.dataAttendanceHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataAttendanceHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(724, 482);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dataAttendanceHistory);

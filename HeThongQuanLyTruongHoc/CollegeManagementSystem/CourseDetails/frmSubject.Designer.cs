@@ -177,7 +177,7 @@
             // 
             this.dataSubjectDetails.AllowUserToAddRows = false;
             this.dataSubjectDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataSubjectDetails.BackgroundColor = System.Drawing.Color.White;
+            this.dataSubjectDetails.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataSubjectDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataSubjectDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataSubjectDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -238,6 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(652, 452);
             this.Controls.Add(this.dataSubjectDetails);
             this.Controls.Add(this.btnClose);
